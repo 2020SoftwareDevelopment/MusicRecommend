@@ -1,7 +1,8 @@
 # MusicRecommend
 组长：张震宇(github账号：loganzhang1)
 
-组员：井泰然(github账号：a46820801@163.com)
+组员：
+     井泰然(github账号：a46820801@163.com)
 
      郭思源(github账号：MooreAndMoore)
      
