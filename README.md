@@ -1,10 +1,7 @@
 # MusicRecommend
      张震宇(github账号：loganzhang1，组长)
-     
      井泰然(github账号：a46820801@163.com)
-
      郭思源(github账号：MooreAndMoore)
-     
      杨靖泽(github账号：YJZ182123)
      
      董思逾(github账号：dsy0221)
