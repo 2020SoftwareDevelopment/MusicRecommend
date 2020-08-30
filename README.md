@@ -1,5 +1,5 @@
 # MusicRecommend
-     张震宇(github账号：loganzhang1)
+     张震宇(github账号：loganzhang1，组长)
      
      井泰然(github账号：a46820801@163.com)
 
