@@ -2,7 +2,7 @@
 Created on Aug 26, 2020
 Tensorflow Implementation of Neural Matrix Factorization (NeuMF) recommender model in:
 He Xiangnan et al. Neural Collaborative Filtering. In WWW 2017.
-@author: Siyuan Guo (21171617, guosy2117@gmail.com)
+@author: Siyuan Guo (21171617, guosyjlu@gmail.com)
 """
 import tensorflow as tf
 
