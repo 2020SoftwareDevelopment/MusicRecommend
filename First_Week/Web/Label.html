@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose your label</title>
+</head>
+<body>
+    <h1>Please choose the label which you are interested in</h1>
+    <from action = "#" method = "GET" name = "Label">
+        <table>
+            <tr>
+                <td>
+                    我感兴趣：
+                </td>
+                <td>
+                    <ul>
+                        <li>
+                            <label for = "fashion">流行 </label>
+                            <input type = "checkbox" name = "Label" value = "流行" id = "fashion"/>
+                        </li>
+                        <li>
+                            <label for = "classical">古典 </label>
+                            <input type = "checkbox" name = "Label" value = "古典" id = "classical"/>
+                        </li>
+                        <li>
+                            <label for = "jazz">爵士 </label>
+                            <input type = "checkbox" name = "Label" value = "爵士" id = "jazz"/>
+                        </li>
+                        <li>
+                            <label for = "rock">摇滚 </label>
+                            <input type = "checkbox" name = "Label" value = "摇滚" id = "rock"/>
+                        </li>
+                        <!-- 后续添加的标签在这里添加 -->
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type = "submit" value = "提交"/>
+                </td>
+            </tr>
+        </table>
+    </from>
+</body>
+</html>
