@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>云医院</title>
+		<link rel="stylesheet" href="layui/css/layui.css">
+		<link rel="stylesheet" href="css/main.css" />
+		<script src="js/jquery-3.5.1.js"></script>
+		
+	</head>
+	
+	<body class="layui-layout-body">
+		<div class="layui-layout layui-layout-admin">
+			<div class="layui-header box-shadow" style="background-color: white;">
+				<div class="layui-logo" style="background-color: #393D49;color: white;">东软云医院HIS系统</div>
+				<ul class="layui-nav layui-layout-right">
+					<li class="layui-nav-item">
+						<a href="javascript:;" class="layui-icon layui-icon-username" style="color: black;">
+							root
+						</a>
+						<dl class="layui-nav-child" style="color: black;">
+							<dd><a href="">基本资料</a></dd>
+							<dd><a href="">安全设置</a></dd>
+						</dl>
+					</li>
+					<li class="layui-nav-item"><a href="" class="layui-icon layui-icon-logout" style="color: black;">退出</a></li>
+				</ul>
+			</div>
+
+			<!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+			<div class="layui-side layui-bg-black">
+				<div class="layui-side-scroll">
+					<!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+					<ul class="layui-nav layui-nav-tree" lay-filter="test">
+						<hr class="layui-bg-green" style="height: 5px;" />
+						<li class="layui-nav-item">
+							<a href="main.html">挂号收费</a>
+							<dl class="layui-nav-child">
+								<dd><a href="javascript:;">新患者</a></dd>
+								<dd><a href="javascript:;">旧患者</a></dd>
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href="mainYJ.html">医技处置</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;">药房管理</a>
+							<dl class="layui-nav-child">
+								<dd><a href="mainYF.html">药房发药</a></dd>
+								<dd><a href="mainYG.html">管理药品</a></dd>
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href="mainKS.html">科室管理</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<!--内容主体区域-->
+			<div class="layui-body">
+				<hr class="layui-bg-gray" />
+				<!--内容背景：灰色-->
+				<div id="box" class="layui-bg-gray main3-body" style="padding: 15px;margin-top:16px;" >
+					
+					<!--搜索病历号部分-->
+					<div>
+						<div class="layui-inline">
+							<input id="inputnum" type="text" name="pid" required lay-verify="required" placeholder="请输入病历号" class="layui-input">
+						</div>
+						<div class="layui-inline">
+							<button class="layui-btn" id="search" @click="search">检索</button>
+						</div> 
+					</div>
+					
+									
+					<!--显示患者信息部分-->
+					<div v-show="isShow1" style="margin-top:30px;" class="layui-card">
+					  <div class="layui-card-header">患者信息</div>
+					  <div class="layui-card-body">
+					    <table  id="table1" class="layui-table" lay-size="sm">
+							<thead id="th1">
+								<tr>
+									<th><b>姓名</b></th>
+									<th><b>性别</b></th>
+									<th><b>出生日期</b></th>
+									<th><b>电话号码</b></th>
+									<th><b>就诊科室</b></th>
+									<th><b>就诊医生</b></th>
+								</tr>
+							</thead>
+					    	
+					    </table>
+					
+					  </div>
+					</div>
+					
+					
+					
+					<!--已开药表格部分-->
+					<div v-show="isShow1" style="margin-top:30px;" class="layui-card">
+						<div class="layui-card-header">已选药品</div>
+						<div class="layui-card-body">
+						    <table id="table2" class="layui-table" lay-size="sm">
+								<thead id="drug">
+									<tr>
+										<!-- <td><input type="checkbox" id="selectall" name="user" title="复选" lay-skin="primary" :value="index" v-model="checked_lis"></td> -->
+										<th><input type="checkbox" id="selectall"/></th>
+										<th><b>药品编码</b></th>
+										<th><b>药品名称</b></th>
+										<th><b>药品规格</b></th>
+										<th><b>药品单价</b></th>
+										<th><b>药品类型</b></th>
+										<th><b>药品数量</b></th>
+										<!-- <th ></th> -->
+									</tr>
+								</thead>
+						    </table>
+							<button class="layui-btn" id="outall" style="margin-left: 425px;" @click="deleteall">发药</button>
+						 </div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+		<!-- layui事件监听 -->
+		<script src="layui/layui.js"></script>
+		<script>
+			//JavaScript代码区域
+			layui.use('element', function() {
+				var element = layui.element;
+				//一些事件监听
+				element.on('nav(test)', function(elem) {
+					console.log(elem); //得到当前点击的DOM对象
+					if (elem.context.innerHTML == "挂号收费") {
+						console.log(elem.context.innerHTML);
+					}
+				});
+			});
+			
+		</script>
+	</body>
+	
+	<!-- vue数据渲染 -->
+	<script src="js/vue.js"></script>
+	<script src="layui/lay/modules/layer.js"></script>
+	<script>
+		//开启vue部分
+		
+		let v=new Vue({
+			el:"#box",
+			data:{
+				
+				whichtips1:true, //若找到json信息，则为true；若未找到json信息，则为false
+				whichtips2:false,
+				
+				isShow1:true,
+				isShow2:false,
+				
+				//病人信息列表：
+				plists:[],
+				//药品信息列表
+				dlists:[],
+				
+				hpdlists:[],
+			
+			},
+			methods:{
+				initData:function(){
+					let self = this
+					//访问本地的json文件病人信息
+					$.getJSON("json/m-record.json",function(data){
+						self.plists = data
+						console.log(self.plists)
+					})
+					$.getJSON("json/m-inventroy.json",function(data){
+						self.dlists= data
+					})
+					$.getJSON("json/m-pdrug.json",function(data){
+						self.hpdlists= data
+						//console.log(self.hpdlists)
+					})
+				},
+				search:function(){
+					let pid = document.querySelector("#inputnum").value
+					let flag = false
+					let pdlists = []
+					for(i in this.plists){
+						let p = this.plists[i]
+						if(p.pid == pid){
+							//找到表格
+							//清空表格数据
+							flag = true
+							$("#table1  tr:not(:first)").empty("");
+							$("#table2  tr:not(:first)").empty("");
+							//console.log(p.pid)
+							let html = "<tr><td>"+p.name+"</td><td>"+ p.sex +"</td><td>"+p.date+"</td><td>"+p.phonenumber+"</td><td>"+p.office+"</td><td>"+p.doctor+"</td></tr>"
+							$("#th1").append(html)
+							
+							//找到数据
+							for(let k in this.hpdlists){
+								let obj = new Object()
+								if(this.hpdlists[k].pid == pid){
+									let mid = this.hpdlists[k].mid
+									obj.mid = mid
+									obj.mnum = this.hpdlists[k].mnum
+									for(let d in this.dlists){
+										if(this.dlists[d].mid == mid){
+											obj.mname = this.dlists[d].mname
+											obj.mspec = this.dlists[d].mspec
+											obj.mprice = this.dlists[d].mprice
+											obj.mtype = this.dlists[d].mtype
+										}
+									}
+									pdlists.push(obj)
+								}
+							}
+						
+							for(let j in pdlists){
+								let pd = pdlists[j]
+								let html2 = "<tr>"+
+										//"<td><input type='checkbox' class='sa' name='user' title='复选' lay-skin='primary' value='index' v-model='checked-lis'></td>"+
+										"<td><input class='sa' type='checkbox'/></td>"+
+										"<td id='mid'>"+pd.mid+"</td>"+
+										"<td id='mname'>"+pd.mname+"</td>"+
+										"<td id='mspec'>"+pd.mspec+"</td>"+
+										"<td id='mprice'>"+pd.mprice+"</td>"+
+										"<td id='mtype'>"+pd.mtype+"</td>"+
+										"<td id='mnum'>"+pd.mnum+"</td>"+
+										// "<td width='30px'>"+
+										// 	"<button class='layui-btn  layui-btn-sm' @click='deleteone()'>"+
+										// 		"<i class='layui-icon'>&#xe609;</i>"+
+										// 	"</button>"+
+										// "</td>"+
+									"</tr>"
+							    $("#drug").append(html2)
+						    }
+					    }
+					}
+					if(!flag){
+						layer.alert("您查找的病历号不存在,请重新输入！")
+						$("#table1  tr:not(:first)").empty("");
+						$("#table2  tr:not(:first)").empty("");
+					}
+				},				
+				deleteall:function(){
+					 var Tabobj = $("#table2")
+					 var Check = $("#table2 input[type=checkbox]:checked")
+					 var infor = ""
+					 Check.each(function () {//遍历
+					    var row = $(this).parent("td").parent("tr");//获取选中行
+						//药品id
+						var mid = $(row).children("#mid").text()
+						//药品数量
+						var num = $(row).children("#mnum").text()
+						//药品名称
+						var name = $(row).children("#mname").text()
+						
+						//药品库存量
+						//let stock = 0
+						//row.remove()
+						//alert(name)
+						//alert(v.dlists)
+						for(let i in v.dlists){
+							// alert(i)
+							// alert(v.dlists[i].mid)
+							if(v.dlists[i].mid == mid){
+								let stock = v.dlists[i].mstock
+								//alert(stock)
+								if( stock < num){
+									let str =  name + "库存不足;"
+									infor += str
+									//数组中元素减少
+								}
+								else{
+									
+									//alter(v.dlist[i].mstock)
+									row.remove()
+									v.dlists[i].mstock -= num
+									//alter(v.dlists[i].mstock)
+									let str =  name + "配药成功;"
+									infor += str
+								}
+								
+							}
+						}
+						layer.alert(infor)
+					})
+					
+				}
+			},
+			created:function(){
+				//窗体加载后执行自动执行的代码块
+				this.initData()
+			}
+		});
+	</script>
+	
+	<!-- 全选反选事件 -->
+	<script type="text/javascript">
+	 $("#selectall").click(function() {
+	 	if (this.checked) {
+	 			$("input[class='sa']:checkbox").each(function() { //遍历所有的name为selectFlag的 checkbox
+	 						$(this).attr("checked", true);
+	 					})
+	 		} else {   //反之 取消全选 
+	 			$("input[class='sa']:checkbox").each(function() { //遍历所有的name为selectFlag的 checkbox
+	 						$(this).attr("checked", false);
+	 						//alert("f");
+	 					})
+	 		}
+	 	})			
+	</script>
+	
+	<!-- <script>
+	    document.getElementById("check").onclick = function(){
+	        var checked = document.getElementById("check").checked;
+	        var checkson = document.getElementsByName("user");
+	        if(checked){
+	            for(var i = 0; i < checkson.length ;i++){
+	                checkson[i].checked = true;
+	            }
+	        }else{
+	            for(var i = 0; i < checkson.length ;i++){
+	                checkson[i].checked = false;
+	            }
+	        }
+	    }
+	</script> -->
+
+</html>

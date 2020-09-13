@@ -1,0 +1,214 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>注册界面</title>
+		<script src="{% static 'musicsRecommend/vue.js' %}" type="text/javascript" charset="utf-8"></script>
+		<script src="{% static 'musicsRecommend/index.js' %}" type="text/jscript" charset="UTF-8"></script>
+		<link rel="stylesheet" type="text/css" href="{% static 'musicsRecommend/register.css' %}" />
+		<script src="{% static 'musicsRecommend/jquery.min.js' %}"></script>
+		<style>
+			*{
+				margin: 0px;padding: 0px;
+			}
+		</style>
+		
+		<script>
+			function signup(){
+				let count=0
+				let label=""
+				let label1=document.querySelector("#liuxing")
+				if(label1.checked){
+					count=count+1
+					label=label+"流行"
+				}
+				let label2=document.querySelector("#shuochang")
+				if(label2.checked){
+					count=count+1
+					if(label==""){
+						label=label+"说唱"
+					}
+					else{
+						label=label+"、说唱"
+					}
+				}
+				let label3=document.querySelector("#qingyinyue")
+				if(label3.checked){
+					count=count+1
+					if(label==""){
+						label=label+"轻音乐"
+					}
+					else{
+						label=label+"、轻音乐"
+					}
+				}
+				let label4=document.querySelector("#oumei")
+				if(label4.checked){
+					count=count+1
+					if(label==""){
+						label=label+"欧美"
+					}
+					else{
+						label=label+"、欧美"
+					}
+				}
+				let label5=document.querySelector("#jueshi")
+				if(label5.checked){
+					count=count+1
+					if(label==""){
+						label=label+"爵士"
+					}
+					else{
+						label=label+"、爵士"
+					}
+				}
+				let label6=document.querySelector("#yundong")
+				if(label6.checked){
+					count=count+1
+					if(label==""){
+						label=label+"运动"
+					}
+					else{
+						label=label+"、运动"
+					}
+				}
+				let label7=document.querySelector("#huayu")
+				if(label7.checked){
+					count=count+1
+					if(label==""){
+						label=label+"华语"
+					}
+					else{
+						label=label+"、华语"
+					}
+				}
+				let label8=document.querySelector("#langman")
+				if(label8.checked){
+					count=count+1
+					if(label==""){
+						label=label+"浪漫"
+					}
+					else{
+						label=label+"、浪漫"
+					}
+				}
+				if(count<3){
+					alert("请选择至少3个标签")
+				}
+				else{
+					let username=document.querySelector("#username").value
+					let password=document.querySelector("#password").value
+					console.log("signup函数")
+					$.ajax({
+						url:"/usernameExist/",
+						type:"POST",
+						data:JSON.stringify({"username" : username}),
+						dataType:"json",
+						success: function(msg){
+							console.log(msg)
+							if(msg["success"]==true){
+								console.log("success return 下面进入addUserInformation函数")
+								addUserInformation(label)
+							}
+							else{
+								alert("error:"+msg["error"])
+								window.location.href="/register/"
+							}
+						}
+					});
+				}
+			}
+			function addUserInformation(label1){
+				console.log("已经进入了addUserInformation函数")
+				let username=document.querySelector("#username").value
+				let password=document.querySelector("#password").value
+				let label=label1
+				$.ajax({
+					url:"/addUserInformation/",
+					type:"POST",
+					data:JSON.stringify({
+						"username":username,
+						"password":password,
+						"label":label
+					}),
+					dataType:"json",
+					success:function(msg){
+						console.log(msg)
+						if(msg["success"]==true){
+							alert("注册成功")
+							window.location.href="/sign_in/"
+						}
+						else{
+							alert("注册失败，失败原因error:"+msg["error"])
+							window.location.href="/register/"
+						}
+					}
+				})
+			}
+		</script>
+	</head>
+	<body>
+		<div id="ops-login-header">
+			<div class="ops-logo ops-main-content">
+				<ul class="ops-login-header-linker">
+					<li><a href="#">关于我们</a></li>
+					<li><a href="#">帮助中心</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="biaoqian">
+		    <label >请选择你喜欢的音乐标签(至少选择三个)</label>
+		    <div>
+		      <input class="checkBox" type="checkbox" id="liuxing" title="流行">流行
+		      <input  class="checkBox" type="checkbox" id="shuochang" title="说唱">说唱
+		      <input  class="checkBox" type="checkbox" id="qingyinyue" title="轻音乐">轻音乐
+			  <input class="checkBox" type="checkbox" id="oumei" title="欧美">欧美
+			  <input  class="checkBox" type="checkbox" id="jueshi" title="爵士">爵士
+			  <input  class="checkBox" type="checkbox" id="yundong" title="运动">运动
+			  <input  class="checkBox" type="checkbox" id="huayu" title="华语">华语
+			  <input  class="checkBox" type="checkbox" id="langman" title="浪漫">浪漫
+		    </div>
+		  </div>
+		<div id="login-bd" class="ops-login-bd">
+			<div class="ops-main-content">
+				<div class="ops-input-box">
+					<div class="ops-input-title">
+						<h2>用户注册</h2>
+					</div>
+					<div class="ops-input-area">
+						<form onsubmit = "return false" action = "">
+							<div class="ops-input-item">
+								<p>用户名：</p>
+								<input type="text" id="username" placeholder="请输入用户名" maxlength="20"/>
+								<span id="helpBlock1" class="help-block">用户名不能超过20个字符</span>
+							</div>
+
+							<div class="ops-input-item">
+								<p>设置密码：</p>
+								<input type="password" id="password" placeholder="请输入密码" />
+								<span id="helpBlock2" class="help-block">密码不能为空</span>
+							</div>
+							
+							<div class="ops-login-btn" onclick="signup()">注册</div>
+						</form>
+						<p class="ops-input-other"><a href="#">联系我们</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="login-footer" class="ops-login-footer">
+			<div class="ops-footer-copyright">
+				<p class="ops-clearfix ops-links">
+					<a href="javascript:;" target="_blank">关于我们</a>
+					<a href="javascript:;" target="_blank">法律声明</a>
+					<a href="javascript:;" target="_blank">服务条款</a>
+					<a href="javascript:;" target="_blank">联系方式</a>
+					<p style="font-family:arial;">地址：吉林大学&nbsp;&nbsp;12345667许可证B1-20160901&nbsp;&nbsp;COPYRIGHT&nbsp;&nbsp;©&nbsp;
+						2020-2021<a href="http://jlu.edu.cn">jlumaker</a>&nbsp;版权所有&nbsp;ICP证：苏A2-20160101</p>
+					<p style="font-family:arial;">被迫营业许可证B1-20150962&nbsp;&nbsp;吉大学子&nbsp;&nbsp;版权所有</p>
+				</p>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+	<script src="{% static 'musicsRecommend/jquery.min.js' %}"></script>
+	<script>
+		function sign(){
+			let username=document.querySelector("#username").value
+			let passwd=document.querySelector("#password").value
+			$.ajax({
+				url:"/login/",
+				type:"POST",
+				data:JSON.stringify({"command":"login",
+				      "username": username, 
+					  "password": passwd
+					  }),
+				dataType:"json",
+				success: function(msg){
+                    if(msg["success"]==true){
+                        window.location.href="/Recommendsong/"
+                    }
+                    else{
+                        console.log(msg)
+                        alert("error:"+msg['error'])
+                    }
+				}
+			});
+        }
+		function register(){
+			window.location.href="/register/"
+        }
+	</script>
+</head>
+<body>
+    <h1>Sign up to Music Recommendation System</h1>
+    <from action = "#" method = "GET" name = "sign in" onsubmit = "return false">
+        <table>
+            <tr>
+                <td>
+                    <label for = "username">用户名：</label>
+                </td>
+                <td>
+                    <input type = "text" name = "username" value = "请输入用户名" id = "username"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for = "password">密码：</label>
+                </td>
+                <td>
+                    <input type = "password" name = "password" id = "password"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type = "submit" onclick="sign()" value = "登录"/>
+                </td>
+                <td>
+                    <input type = "button" value = "注册" onclick="register()">
+                    <!---->
+                </td>
+            </tr>
+        </table>
+    </from>
+</body>
+</html>

@@ -1,0 +1,126 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+
+		<title>Hot Song</title>
+		<link rel="stylesheet" href="{% static 'musicsRecommend/layui/css/layui.css' %}">
+		<link rel="stylesheet" href="{% static 'musicsRecommend/main.css' %}">
+
+		<style>
+			* {
+      margin: 0px;
+      padding: 0px;
+    }
+  </style>
+  <script>
+	function personcenter(){
+		window.location.href="/personCenter/"
+	}
+	function hotSong(){
+		window.location.href="/hotSong/"
+	}
+	function personRecommend(){
+		window.location.href="/Recommendsong/"
+	}
+	function exit(){
+		window.location.href="/exit/"
+	}
+	function searchSong(){
+		window.location.href="/searchSong/"
+	}
+	</script>
+	</head>
+	<script src="{% static 'musicsRecommend/layui/layui.js' %}"></script>
+
+	<body class="layui-layout-body">
+		<div class="layui-layout layui-layout-admin">
+			<div class="layui-header box-shadow" style="background-color: white;">
+				<div class="layui-logo" style="background-color: #393D49;color: white;">小郭音乐推荐系统</div>
+				<ul class="layui-nav layui-layout-right">
+					<li class="layui-nav-item"><a onclick="exit()" class="layui-icon layui-icon-logout" style="color: black;">exit</a></li>
+				</ul>
+			</div>
+
+			<div class="layui-side layui-bg-black">
+				<div class="layui-side-scroll">
+					<div class="layui-side-scroll">
+						<!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+						<ul class="layui-nav layui-nav-tree" lay-filter="test">
+							<hr class="layui-bg-green" style="height: 5px;" />
+							
+							<li class="layui-nav-item">
+								<a onclick="personcenter()">personcenter</a>
+							</li>
+							<li class="layui-nav-item">
+								<a onclick="searchSong()">searchSong</a>
+							</li>
+							<li class="layui-nav-item">
+								<a onclick="hotSong()">hotSong</a>
+							</li>
+							<li class="layui-nav-item">
+								<a onclick="personRecommend()">personRecommend</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div id="box" class="layui-body">
+				<!-- 内容主体区域 -->
+
+				<!-- tab -->
+				<hr class="layui-bg-gray" />
+				<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+					<ul class="layui-tab-title">
+						<li class="layui-this">Hot Song</li>
+					</ul>
+
+					<div style="padding: 15px;margin-top:16px;">
+
+						<table class="layui-table">
+							<colgroup>
+								<col width="100">
+								<col width="100">
+								<col width="100">
+								<col width="100">
+								<col width="100">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>songname</th>
+									<th>singer</th>
+									<th>song_sheet_name</th>
+									<th>label</th>
+								</tr>
+							</thead>
+							<tr>
+								{% for g in data %}
+								<tr>
+									<td id="songname">{{g.songname}}</td>
+									<td id="singer">{{g.singer}}</td>
+									<td id="song_sheet_name">{{g.song_sheet_name}}</td>
+									<td id="label">{{g.label}}</td>
+								</tr>
+								{% endfor %}
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<script src="{% static 'musicsRecommend/jquery-3.5.1.min.js' %}"></script>
+			<script src="{% static 'musicsRecommend/vue.js' %}"></script>
+			<script src="{% static 'musicsRecommend/layui/layui.all.js' %}"></script>
+			<script src="{% static 'musicsRecommend/layui/lay/modules/layer.js' %}"></script>
+			<!-- 此处添加脚本 -->
+	</body>
+
+</html>

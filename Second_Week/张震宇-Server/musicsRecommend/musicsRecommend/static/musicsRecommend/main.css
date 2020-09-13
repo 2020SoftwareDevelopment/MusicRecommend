@@ -1,0 +1,142 @@
+.box-shadow{
+	box-shadow: 0px 5px 5px -5px #393D49;
+}
+.tittle-box {
+  background-color: royalblue;
+  height: 80px;
+}
+
+.tittle-text {
+  width: 600px;
+  font-size: 25px;
+  line-height: 80px;
+  font-family: "microsoft yahei";
+  margin-left: 60px;
+  color: white;
+}
+
+.tittle-root {
+  font-size: 20px;
+  line-height: 80px;
+  font-family: "microsoft yahei";
+  color: white;
+}
+
+.main-box {
+  height: 800px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.main-left {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 100%;
+  background-color: #D9D9D9;
+  position: relative;
+  text-decoration: none;
+  border: ;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #D9D9D9;
+}
+
+.main-left-content {
+  display: inline-block;
+  text-align: center;
+  line-height: 50px;
+  width: 200px;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  height: 50px;
+  border-bottom: solid 1px lightgray;
+}
+
+.main-left-content-item {
+  list-style: none;
+  text-decoration: none;
+  height: 50px;
+  padding-left: 85px;
+  line-height: 50px;
+  color: black;
+  border-bottom: solid 1px lightgray;
+}
+
+.main-left-content-item-line {
+  border-bottom: solid 1px lightgray;
+  height: 1px;
+}
+
+.main-right {
+  height: 100%;
+  width: 100%;
+  padding: 10px 20px 20px 20px;
+
+}
+
+.input-button {
+  width: 100%;
+
+}
+
+.input-button li {
+  float: left;
+}
+
+.input-button>li:nth-child(1) {
+  width: 300px;
+}
+
+.input-button>li:nth-child(2) {
+  width: 300px;
+}
+
+.input-button>li:nth-child(3) {
+  width: 300px;
+}
+
+@font-face {
+  font-family: 'iconfont';
+  /* project id 2047409 */
+  src: url('//at.alicdn.com/t/font_2047409_ctukn248yzo.eot');
+  src: url('//at.alicdn.com/t/font_2047409_ctukn248yzo.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_2047409_ctukn248yzo.woff2') format('woff2'),
+    url('//at.alicdn.com/t/font_2047409_ctukn248yzo.woff') format('woff'),
+    url('//at.alicdn.com/t/font_2047409_ctukn248yzo.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_2047409_ctukn248yzo.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  /*可见度设为隐藏。注意它和 display:none; 是有区别的。仍然占据空间，只是看不到而已*/
+  height: 0;
+  font-size: 0;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+#test1 {
+  float: right;
+  margin-top: -10px;
+}
+
+label i{
+  color: red;
+}

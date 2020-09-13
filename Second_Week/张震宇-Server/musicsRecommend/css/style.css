@@ -1,0 +1,296 @@
+*,
+body,
+html,
+ul,
+li {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+}
+ul,
+li {
+	list-style: none;
+	cursor:pointer;    /*光标呈现为一只手*/
+}
+
+.container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;/*flex是Flexible Box的缩写，意为"弹性布局"，用来为盒状模型提供最大的灵活性*/
+	justify-content: center;/*弹性项目居中紧挨着填充*/
+	align-items: center;/*居中对齐弹性盒的各项 <div> 元素*/
+	background:url(../images/1.jpg) ;/*把图片作为背景*/
+	background-repeat:no-repeat;/*背景图像将仅显示一次*/
+	background-size: 100%;/*按容器比例撑满，图片变形；*/
+	transform-style: preserve-3d;/*preserve-3d表示所有子元素在3D空间中呈现*/
+	perspective: 1000px;/*perspective 属性定义3D元素距视图的距离*/
+}
+
+.container .main {
+	width: 500px;	
+	height: 500px;
+	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);/*设置边框阴影box-shadow的四个参数：x-offset x轴偏移,y-offset y轴偏移,blur 模糊值,color of shadow 阴影颜色*/
+	background: #80e8ff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform-style: preserve-3d;
+	perspective: 800px;
+	animation: mainplay 1s linear forwards;/*animation用于实现复杂动画，linear 动画从头到尾的速度是相同的,forwards 当动画完成后，保持最后一帧的状态*/
+}
+@keyframes mainplay{   /*keyframes(关键帧)：计算机动画术语*/
+	from{transform: scale(0) rotate(360deg); opacity: 0;}/*用关键词"from"和"to"来规定变化发生的时间,等同于0%和100%*/
+	to{transform: scale(1)  rotate(0deg); opacity: 1;}   /*scale 放大或缩小，rotate 旋转，设置 div 元素的不透明级别，从 0（完全透明）到1（完全不透明）*/
+}
+.container .main .registerpage {   /*注册页面*/
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+.container .main .bg {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: linear-gradient(#ffffff, #65f0ffbd);    /*颜色线性渐变*/
+	z-index: -1;/*z-index:-1是让一个层在所有层的下面当背景*/
+	animation: clipplay 2s infinite alternate linear;/*infinite：设置动画无线循环播放,alternate:表示动画在奇数次播放时为正向播放，为偶数次播放时为反向播放*/
+}
+
+@keyframes clipplay {
+	from {
+		clip-path: polygon(20% 0%, 0% 20%, 9% 50%, 0% 80%, 20% 100%, 53% 93%, 80% 100%, 100% 80%, 89% 50%, 100% 20%, 80% 0%, 48% 13%);
+	}/*clip-path属性可以创建一个只有元素的部分区域可以显示的剪切区域,区域内的部分显示，区域外的隐藏,可以用这个属性来创建各种图形*/
+
+	to {
+		clip-path: polygon(20% 0%, 0% 20%, 0 52%, 0% 80%, 20% 100%, 50% 100%, 80% 100%, 100% 80%, 100% 48%, 100% 20%, 80% 0%, 48% 0);
+	}
+}
+
+.container .main .formone {
+	width: 80%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;/*flex-direction 属性规定灵活项目的方向垂直显示*/
+	/* display: none; */
+	position: relative;
+}
+
+.container .main .formone div {/*盒子标签*/
+	width: 100%;
+	height:15%;
+	text-align: center;/*设置元素的文本对齐方式为居中*/
+	margin-top:3%;/*设置元素的上外边距,定义基于父对象总高度的百分比上外边距。*/
+}
+.container .main .formone div:nth-child(6) {  /*伪类选择器：在html文件中看到是登录标签*/
+	margin-top:10%;
+}
+
+.container .main .formone .title {
+	display: flex;
+	justify-content: center;/*使项目位于容器的中心。*/
+	align-items: center;
+	color: #6ad6c8f0;
+	font-size: 40px;/*设置字体的尺寸*/
+}
+
+.container .main .formone .username {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container .main .formone input {
+	width: 100%;
+	height: 70%;
+	line-height: 100%;/*设置以百分比计的行高*/
+	border-radius: 5px;/*向div元素添加圆角边框*/
+	border: 1px solid rgba(255, 255, 255, 0.2);/*设定元素的边框为1像素宽、实线、颜色使用rgba来表达*/
+	background: transparent;/*背景透明*/
+	color: black;
+	outline: none;
+	text-align: center;
+	box-shadow: 0px 0px 2px 0px #6c569a;
+}
+
+::-webkit-input-placeholder {/*谷歌兼容写法 Chrome/Opera/Safari */
+	/* WebKit browsers */
+	color: white;
+	font-size: 16px;
+}
+
+.container .main .formone input:hover {
+	box-shadow: 0px 0px 20px 0px #4787d2;
+}
+
+.container .main .formone .remember{
+	width:150px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 20px;
+	position: absolute;
+	top:52%;
+	left:40px;
+}
+
+.container .main .formone .seekbtn{
+	width:150px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 20px;
+	position: absolute;
+	top:52%;
+	right:40px;
+}
+.container .main .formone .seekbtn a{
+	text-decoration: none;
+	
+}
+.container .main .formone .remember input {
+	width:10px ;
+	height:10px ;
+}
+
+.container .main .formone button {
+	width: 100%;
+	height: 70%;
+	line-height: 100%;
+	border-radius: 5px;
+	border: none;
+	background: #714cac;
+	color: white;
+	outline: none;
+	font-size: 40px;
+}
+
+.container .main .formone .loginbtn,
+.container .main .formone .registerbtn {
+	position: relative;
+}
+
+.btnbg {
+	width: 0% !important;
+	height: 70%;
+	position: absolute;
+	left: 50%;
+	background: linear-gradient(#9756e2, #495a73);
+	transition: all 1s;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	letter-spacing: 5px;
+	border-radius: 5px;
+
+}
+
+.container .main .formone .registerbtn button,
+.container .main .formone .loginbtn  button{
+	position: absolute;
+	width: 100% ;
+	height:100%;
+	left: 0;
+	top:0;
+	background-color: #8ccaff;
+	cursor: pointer;
+}
+
+.container .main .registerpage {
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	display: none;    /*不显示该页面(点击注册后才显示)*/
+}
+
+.container .main .formtwo {
+	width: 80%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.container .main .formtwo>div {/*formtwo下的第一个div:注册标题*/
+	width: 100%;
+	flex: 1;/*让所有弹性盒模型对象的子元素都有相同的长度，且忽略它们内部的内容*/
+	text-align: center;
+}
+
+.container .main .formtwo .registertitle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #6ad6c8f0;
+	font-size: 40px;
+}
+
+.container .main .formtwo input {
+	width: 100%;
+	height: 60%;
+	line-height: 100%;
+	border-radius: 5px;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	background: transparent;
+	color: black;
+	outline: none;
+	text-align: center;
+	margin-top: -30px;    /*边框外部向上30px的长度*/
+	box-shadow: 0px 0px 2px 0px #6c569a;
+}
+.container .main .formtwo input:hover {
+	box-shadow: 0px 0px 20px 0px #4787d2;
+}
+.container .main .formtwo .btn_list{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.container .main .formtwo .btn_list>div{
+width: 100%;
+}
+.container .main .formtwo .btn_list button{
+	width: 80%;
+	height: 35%;
+	background: transparent;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 5px;
+	outline: none;
+}
+.container .main .formtwo .btn_list button:hover{
+	background: #5278cafc;
+}
+    .layui-nav-child{
+    				width: 100px;
+    				display: none;
+    			} 
+    			.hidden{
+    				display: none;
+    			}
+    			.show{
+    				
+    			}
+    			.xingbie{
+    				
+    			}
+    			
+    
+    				.zhenbuchuo{
+    					box-shadow: #00F7DE;
+    					border: solid #007DDB;
+    					border-radius: 8px;
+    				}
+    				.shanlimian{
+    					margin: auto;
+    					width: 50px;
+    					padding: 5px;
+    				}
+    				.shanlimian td{
+    					width: 100px;
+    					padding: 2px;	
+    				}

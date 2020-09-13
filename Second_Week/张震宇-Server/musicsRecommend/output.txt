@@ -1,0 +1,331 @@
+Watching for file changes with StatReloader
+[12/Sep/2020 15:43:22] "GET /sign_in/ HTTP/1.1" 200 3546
+[12/Sep/2020 15:43:22] "GET /static/musicsRecommend/vue.js HTTP/1.1" 304 0
+[12/Sep/2020 15:43:22] "GET /static/musicsRecommend/index.js HTTP/1.1" 304 0
+[12/Sep/2020 15:43:22] "GET /static/musicsRecommend/index.css HTTP/1.1" 304 0
+[12/Sep/2020 15:43:22] "GET /static/musicsRecommend/jquery.min.js HTTP/1.1" 304 0
+Not Found: /favicon.ico
+[12/Sep/2020 15:43:23] "GET /favicon.ico HTTP/1.1" 404 3436
+[12/Sep/2020 15:43:32] "GET /sign_in/ HTTP/1.1" 200 3546
+Not Found: /favicon.ico
+[12/Sep/2020 15:43:34] "GET /favicon.ico HTTP/1.1" 404 3436
+[12/Sep/2020 15:43:39] "GET /sign_in/ HTTP/1.1" 200 3546
+[12/Sep/2020 15:43:40] "GET /static/musicsRecommend/index.css HTTP/1.1" 200 3403
+[12/Sep/2020 15:43:40] "GET /static/musicsRecommend/index.js HTTP/1.1" 200 173
+[12/Sep/2020 15:43:40] "GET /static/musicsRecommend/vue.js HTTP/1.1" 200 93675
+[12/Sep/2020 15:43:40] "GET /static/musicsRecommend/jquery.min.js HTTP/1.1" 200 93107
+Not Found: /favicon.ico
+[12/Sep/2020 15:43:41] "GET /favicon.ico HTTP/1.1" 404 3436
+[12/Sep/2020 15:43:46] "GET /register/ HTTP/1.1" 200 6330
+[12/Sep/2020 15:43:46] "GET /static/musicsRecommend/register.css HTTP/1.1" 200 3667
+[12/Sep/2020 15:43:51] "GET /static/musicsRecommend/register.jpg HTTP/1.1" 200 811075
+[12/Sep/2020 15:45:03] "GET /sign_in/ HTTP/1.1" 200 3546
+Not Found: /favicon.ico
+[12/Sep/2020 15:45:04] "GET /favicon.ico HTTP/1.1" 404 3436
+[12/Sep/2020 15:45:06] "GET /register/ HTTP/1.1" 200 6330
+[12/Sep/2020 15:45:22] "POST /usernameExist/ HTTP/1.1" 200 30
+[12/Sep/2020 15:45:22] "POST /addUserInformation/ HTTP/1.1" 200 42
+[12/Sep/2020 15:45:25] "GET /sign_in/ HTTP/1.1" 200 3546
+[12/Sep/2020 15:45:34] "GET /register/ HTTP/1.1" 200 6330
+[12/Sep/2020 15:45:46] "POST /usernameExist/ HTTP/1.1" 200 30
+[12/Sep/2020 15:45:47] "POST /addUserInformation/ HTTP/1.1" 200 42
+[12/Sep/2020 15:45:48] "GET /sign_in/ HTTP/1.1" 200 3546
+[12/Sep/2020 15:45:54] "POST /login/ HTTP/1.1" 200 30
+[12/Sep/2020 15:45:54] "GET /personCenter/ HTTP/1.1" 200 4555
+[12/Sep/2020 15:45:54] "GET /static/musicsRecommend/layui/css/layui.css HTTP/1.1" 200 74303
+[12/Sep/2020 15:45:55] "GET /static/musicsRecommend/main.css HTTP/1.1" 200 2605
+[12/Sep/2020 15:45:55] "GET /static/musicsRecommend/layui/layui.js HTTP/1.1" 200 7395
+[12/Sep/2020 15:45:55] "GET /static/musicsRecommend/jquery-3.5.1.js HTTP/1.1" 200 287630
+[12/Sep/2020 15:45:56] "GET /static/musicsRecommend/layui/font/iconfont.woff2?v=256 HTTP/1.1" 200 25964
+[12/Sep/2020 15:46:03] "GET /personCenter/ HTTP/1.1" 200 4555
+[12/Sep/2020 15:46:07] "GET /searchSong/ HTTP/1.1" 200 5548
+[12/Sep/2020 15:46:09] "GET /Recommendsong/ HTTP/1.1" 200 7389
+[12/Sep/2020 15:46:09] "GET /static/musicsRecommend/jquery-3.5.1.min.js HTTP/1.1" 200 89476
+[12/Sep/2020 15:46:09] "GET /static/musicsRecommend/layui/lay/modules/layer.js HTTP/1.1" 200 22041
+[12/Sep/2020 15:46:10] "GET /static/musicsRecommend/layui/layui.all.js HTTP/1.1" 200 278470
+[12/Sep/2020 15:46:11] "GET /static/musicsRecommend/layui/css/modules/laydate/default/laydate.css?v=5.0.9 HTTP/1.1" 200 7537
+[12/Sep/2020 15:46:11] "GET /static/musicsRecommend/layui/css/modules/layer/default/layer.css?v=3.1.1 HTTP/1.1" 200 14425
+[12/Sep/2020 15:46:11] "GET /static/musicsRecommend/layui/css/modules/code.css HTTP/1.1" 200 1063
+Performing system checks...
+
+111
+127.0.0.1 3306 root 123456 tangji utf8
+True
+System check identified no issues (0 silenced).
+September 12, 2020 - 15:43:17
+Django version 3.1.1, using settings 'musicsRecommend.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+params: {'username': 'hhhhbb'}
+ret: {'success': True, 'error': '', 'data': ''}
+params: {'username': 'nnn'}
+ret: {'success': True, 'error': '', 'data': ''}
+login函数中
+nnn
+True
+ret: {'success': True, 'error': '', 'data': ()}
+data: []
+ret: {'success': True, 'error': '', 'data': ()}
+data: []
+{'success': True, 'error': '', 'data': ()}
+ready to enter recommend.initRecommend
+username nnn
+userInfor {'success': True, 'error': '', 'data': (('nnn', 'nnn', '爵士、运动、浪漫'),)}
+key_str 爵士、运动、浪漫
+key ['爵士', '运动', '浪漫']
+dictionary: {'爵士': ['863552449', '1467181876', '1448355308', '1347593629', '1311535958', '540550341', '1356464467', '1337703277', '1468037342', '1325020123'], '运动': ['574926583', '17242314', '2715016', '1299616938', '4196674', '1312061175', '18587857', '36895891', '563855845', '501551714'], '浪漫': ['431795608', '1417724468', '1300751032', '446557635', '1313558538', '571711587', '1388791251', '1390749246', '1294144648', '1382693097']}
+quit the recommend.initRecommend
+recomSongId ['1325020123', '2715016', '1300751032', '863552449', '1299616938', '1417724468', '1337703277', '574926583', '1388791251']
+{'success': True, 'error': '', 'data': (('1325020123', '[FREE BEAT]freestyle beat', "'MingN小明'", '2053196853', "'说唱、爵士、R&amp;B/Soul'"),)}
+{'success': True, 'error': '', 'data': (('2715016', "Sendin 'Em Back", "'Heather B.'", '3028955658、5123838271', "'说唱、'说唱'、欧美、运动'"),)}
+{'success': True, 'error': '', 'data': (('1300751032', '湯', "'蝴蝶效应(B.E.)'", '2126269011', "'说唱、浪漫、快乐'"),)}
+{'success': True, 'error': '', 'data': (('863552449', '【免费Free伴奏Beat】 Trapsoul beat 么么哒', "'JR Views'", '2053196853、2317312244、3192376788、4866567634', "'说唱、90后'、R&amp;B/Soul'、华语'、流行、爵士、电子、电子'"),)}
+{'success': True, 'error': '', 'data': (('1299616938', 'Switch It Up', "'Marcus'", '2647807174', "'舞曲、运动、说唱'"),)}
+{'success': True, 'error': '', 'data': (('1417724468', '晚安 Outro', "'邵琦'", '2526611776', "'华语、说唱、浪漫'"),)}
+{'success': True, 'error': '', 'data': (('1337703277', '十級火災(MadeinTYO type beat)', "'4Hunnid'", '2053196853、2548574378、2721633452', "'电子、'说唱、R&amp;B/Soul'、流行、爵士、电子'、说唱、轻音乐'"),)}
+{'success': True, 'error': '', 'data': (('574926583', 'Nonstop', "'Drake'", '2011154998、2122279649、2320144876、2633514423、2714443966、2755687592、2773604798、2875321368、2879591110、2913623900、2919187927、3068435314、3126320744、3211610053、4885662568、4891115827、5159916815', "'欧美、'说唱、'说唱'、R&amp;B/Soul'、兴奋'、另类/独立、放松'、欧美、欧美'、流行、流行'、电子'、说唱、运动'、酒吧'、驾车'"),)}
+{'success': True, 'error': '', 'data': (('1388791251', '只想带着你', "'Pyb'", '2545344889、2834027258、3195405516、5086809523', "'华语、'流行、'浪漫、华语'、流行'、浪漫'、说唱"),)}
+[{'songid': '1325020123', 'songname': '[FREE BEAT]freestyle beat', 'singer': "'MingN小明'", 'label': "'说唱、爵士、R&amp;B/Soul'"}, {'songid': '2715016', 'songname': "Sendin 'Em Back", 'singer': "'Heather B.'", 'label': "'说唱、'说唱'、欧美、运动'"}, {'songid': '1300751032', 'songname': '湯', 'singer': "'蝴蝶效应(B.E.)'", 'label': "'说唱、浪漫、快乐'"}, {'songid': '863552449', 'songname': '【免费Free伴奏Beat】 Trapsoul beat 么么哒', 'singer': "'JR Views'", 'label': "'说唱、90后'、R&amp;B/Soul'、华语'、流行、爵士、电子、电子'"}, {'songid': '1299616938', 'songname': 'Switch It Up', 'singer': "'Marcus'", 'label': "'舞曲、运动、说唱'"}, {'songid': '1417724468', 'songname': '晚安 Outro', 'singer': "'邵琦'", 'label': "'华语、说唱、浪漫'"}, {'songid': '1337703277', 'songname': '十級火災(MadeinTYO type beat)', 'singer': "'4Hunnid'", 'label': "'电子、'说唱、R&amp;B/Soul'、流行、爵士、电子'、说唱、轻音乐'"}, {'songid': '574926583', 'songname': 'Nonstop', 'singer': "'Drake'", 'label': "'欧美、'说唱、'说唱'、R&amp;B/Soul'、兴奋'、另类/独立、放松'、欧美、欧美'、流行、流行'、电子'、说唱、运动'、酒吧'、驾车'"}, {'songid': '1388791251', 'songname': '只想带着你', 'singer': "'Pyb'", 'label': "'华语、'流行、'浪漫、华语'、流行'、浪漫'、说唱"}]
+{'success': True, 'error': '', 'data': ()}
+ready to enter recommend.initRecommend
+username nnn
+userInfor {'success': True, 'error': '', 'data': (('nnn', 'nnn', '爵士、运动、浪漫'),)}
+key_str 爵士、运动、浪漫
+key ['爵士', '运动', '浪漫']
+dictionary: {'爵士': ['546259353', '1440405641', '1437274287', '1450298045', '1449034811', '1355752007', '564808676', '1337783240', '1438835384', '1455787436'], '运动': ['2660675', '520459701', '18922269', '478203115', '17242315', '435288399', '1421470028', '30780506', '1448424177', '1298432428'], '浪漫': ['866279886', '1345276860', '1332227018', '1336913754', '465605683', '421807947', '526116053', '1449504728', '1400456054', '1372664049']}
+quit the recommend.initRecommend
+recomSongId ['1437274287', '1421470028', '1336913754', '1440405641', '520459701', '1345276860', '1455787436', '2660675', '1372664049']
+{'success': True, 'error': '', 'data': (('1437274287', "''U owe Me''-NF Type beat(Prod by. LRUI17)", "'LRUI17'", '2073984202、2444167008、2471792593、3172934994、987207613', "'流行、'说唱、R&amp;B/Soul'、世界音乐'、华语、华语'、流行、爵士'、说唱'、雷鬼"),)}
+{'success': True, 'error': '', 'data': (('1421470028', 'Yikes', "'Nicki Minaj'", '2155383482、2320144876、2755687592、2840884575、2852805110、2875321368、2903182988、3000719797、4867118022、4901099218、4967112108、5123838271', "'欧美、'说唱、'说唱'、R&amp;B/Soul'、另类/独立、欧美、流行'、电子、电子'、说唱、说唱'、运动'、酒吧'、驾车'"),)}
+{'success': True, 'error': '', 'data': (('1336913754', '郁 郁 寡 欢 的 我', "'ka7s1ck'", '2126269011', "'说唱、浪漫、快乐'"),)}
+{'success': True, 'error': '', 'data': (('1440405641', "[Free]''daydreamerz''-''Jazz HipHop Beat''", "'REDRUM MUSIC'", '2053196853、2073984202、2238567706、2391407782', "'欧美、'说唱、R&amp;B/Soul'、华语'、怀旧、流行、爵士、经典'、说唱'"),)}
+{'success': True, 'error': '', 'data': (('520459701', '想把你留在这里 电影《芳华》推广曲', "'Tizzy T', 'Jony J'", '2004288713、2241015730、2326283548、2476938465、2545344889、817685692', "'华语、'流行、'说唱、'说唱'、R&amp;B/Soul'、散步。更多相关热门精选歌单推荐尽在网易云音乐'、流行'、浪漫'、清新、说唱、运动'"),)}
+{'success': True, 'error': '', 'data': (('1345276860', '逃跑', "'函几'", '2126269011', "'说唱、浪漫、快乐'"),)}
+{'success': True, 'error': '', 'data': (('1455787436', '【Free】Space Mario - Lil Uzi Vert Type Beat', "'CherryBomb'", '2471792593', "'说唱、雷鬼、爵士'"),)}
+{'success': True, 'error': '', 'data': (('2660675', 'Zig Zag Chamber', "'Gravediggaz'", '3028955658', "'说唱、欧美、运动'"),)}
+{'success': True, 'error': '', 'data': (('1372664049', '刚好', "'周佳顺'", '2126269011、2423535344、2690349854、2773489263、2808304114、3017731066、5086809523', "'华语、'说唱、'说唱'、伤感'、华语'、孤独'、快乐'、治愈、流行、流行'、浪漫、说唱"),)}
+[{'songid': '1437274287', 'songname': "''U owe Me''-NF Type beat(Prod by. LRUI17)", 'singer': "'LRUI17'", 'label': "'流行、'说唱、R&amp;B/Soul'、世界音乐'、华语、华语'、流行、爵士'、说唱'、雷鬼"}, {'songid': '1421470028', 'songname': 'Yikes', 'singer': "'Nicki Minaj'", 'label': "'欧美、'说唱、'说唱'、R&amp;B/Soul'、另类/独立、欧美、流行'、电子、电子'、说唱、说唱'、运动'、酒吧'、驾车'"}, {'songid': '1336913754', 'songname': '郁 郁 寡 欢 的 我', 'singer': "'ka7s1ck'", 'label': "'说唱、浪漫、快乐'"}, {'songid': '1440405641', 'songname': "[Free]''daydreamerz''-''Jazz HipHop Beat''", 'singer': "'REDRUM MUSIC'", 'label': "'欧美、'说唱、R&amp;B/Soul'、华语'、怀旧、流行、爵士、经典'、说唱'"}, {'songid': '520459701', 'songname': '想把你留在这里 电影《芳华》推广曲', 'singer': "'Tizzy T', 'Jony J'", 'label': "'华语、'流行、'说唱、'说唱'、R&amp;B/Soul'、散步。更多相关热门精选歌单推荐尽在网易云音乐'、流行'、浪漫'、清新、说唱、运动'"}, {'songid': '1345276860', 'songname': '逃跑', 'singer': "'函几'", 'label': "'说唱、浪漫、快乐'"}, {'songid': '1455787436', 'songname': '【Free】Space Mario - Lil Uzi Vert Type Beat', 'singer': "'CherryBomb'", 'label': "'说唱、雷鬼、爵士'"}, {'songid': '2660675', 'songname': 'Zig Zag Chamber', 'singer': "'Gravediggaz'", 'label': "'说唱、欧美、运动'"}, {'songid': '1372664049', 'songname': '刚好', 'singer': "'周佳顺'", 'label': "'华语、'说唱、'说唱'、伤感'、华语'、孤独'、快乐'、治愈、流行、流行'、浪漫、说唱"}][12/Sep/2020 15:46:29] "GET /Recommendsong/ HTTP/1.1" 200 7773
+[12/Sep/2020 15:46:32] "GET /Recommendsong/ HTTP/1.1" 200 7941
+[12/Sep/2020 15:46:39] "GET /hotSong/ HTTP/1.1" 200 3883
+[12/Sep/2020 15:46:41] "GET /searchSong/ HTTP/1.1" 200 5548
+[12/Sep/2020 15:46:43] "GET /personCenter/ HTTP/1.1" 200 4555
+
+{'success': True, 'error': '', 'data': ()}
+ready to enter recommend.initRecommend
+username nnn
+userInfor {'success': True, 'error': '', 'data': (('nnn', 'nnn', '爵士、运动、浪漫'),)}
+key_str 爵士、运动、浪漫
+key ['爵士', '运动', '浪漫']
+dictionary: {'爵士': ['1399413450', '1428548780', '510258310', '17282443', '1372577127', '1379702583', '2781172', '1352840189', '1457540065', '1319626848'], '运动': ['438981337', '19082197', '480257404', '17578813', '410519052', '1336866077', '1418974003', '28413830', '408971193', '409646757'], '浪漫': ['95863', '1389177434', '1313802313', '1405135261', '1378757860', '1384113848', '459847590', '561999698', '1434065517', '556203103']}
+quit the recommend.initRecommend
+recomSongId ['1428548780', '480257404', '459847590', '1399413450', '409646757', '1434065517', '510258310', '28413830', '1378757860']
+{'success': True, 'error': '', 'data': (('1428548780', '"Venus" Trap Soul Beat', "'CaRSo'", '2471792593', "'说唱、雷鬼、爵士'"),)}
+{'success': True, 'error': '', 'data': (('480257404', 'Master\xa0B（Prod.By\xa0鹤仙问鹿仙）', "'Buzzy', '鹤仙问鹿仙'", '2083161386、2218631074、2875798808、2912889978、2947597864、3104513300、462072098、5163436388、832595290', "'华语、'说唱、'说唱'、华语、华语'、榜单'、治愈'、流行、流行'、游戏'、说唱、说唱'、运动'"),)}
+{'success': True, 'error': '', 'data': (('459847590', 'L', "'YKEY'", '2029498041、2126269011、2311578962、2555137218、2773489263、2875798808、2923714434、923565622', "'华语、'说唱、华语、孤独'、快乐'、流行'、浪漫、说唱、酒吧'、驾车"),)}
+{'success': True, 'error': '', 'data': (('1399413450', 'I Never Told You（翻自 陈冠希） ', "'杨飞机'", '2311578962、2633763962、2808304114、2904974388、2986300351、4864596029、4865352738、5069673846', "'华语、'流行、'浪漫、'说唱、伤感、伤感'、华语'、日语、治愈、流行'、浪漫'、爵士'、电子、翻唱'、说唱、韩语'"),)}
+{'success': True, 'error': '', 'data': (('409646757', 'ronin of the crypt', "'shinigami ₆⁶₆'", '2647807174、2840884575、3000719797', "'欧美、'舞曲、'说唱、欧美、电子、电子'、说唱'、运动"),)}
+{'success': True, 'error': '', 'data': (('1434065517', '靠近一点', "'BigYear大年'", '2126269011、2311578962、2356473597、2657483892、2753915745、2768807373、2773489263、2808304114、2989718660、3017731066、4921500847、4926388301、4998496444、5104174752、5189550726、990015063', "'伤感、'华语、'说唱、'说唱'、伤感'、华语、华语'、孤独'、快乐'、散步'、治愈、流行、流行'、浪漫、浪漫'、清新'、说唱、说唱'"),)}
+{'success': True, 'error': '', 'data': (('510258310', '小青龙&辉子\xa0-\xa0Time\xa0扒带作品', "'DBRT'", '2471792593、2517082149、2540800932、3022736345', "'流行、'说唱、00后'、伤感'、欧美'、爵士'、说唱、雷鬼"),)}
+{'success': True, 'error': '', 'data': (('28413830', 'Tall Ground', "'Deluxe'", '2647807174、5039871450', "'舞曲、'说唱、说唱'、运动、酒吧'"),)}
+{'success': True, 'error': '', 'data': (('1378757860', 'XIA (Prod by WayMen)', "'歪歪C'", '2126269011、2322980794、2423939332、2477863140、2627910156、2773489263、3220806525、5104174752', "'华语、'治愈、'说唱、R&amp;B/Soul'、华语、华语'、夜晚'、孤独'、快乐'、治愈、浪漫、浪漫'、说唱、说唱'"),)}
+[{'songid': '1428548780', 'songname': '"Venus" Trap Soul Beat', 'singer': "'CaRSo'", 'label': "'说唱、雷鬼、爵士'"}, {'songid': '480257404', 'songname': 'Master\xa0B（Prod.By\xa0鹤仙问鹿仙）', 'singer': "'Buzzy', '鹤仙问鹿仙'", 'label': "'华语、'说唱、'说唱'、华语、华语'、榜单'、治愈'、流行、流行'、游戏'、说唱、说唱'、运动'"}, {'songid': '459847590', 'songname': 'L', 'singer': "'YKEY'", 'label': "'华语、'说唱、华语、孤独'、快乐'、流行'、浪漫、说唱、酒吧'、驾车"}, {'songid': '1399413450', 'songname': 'I Never Told You（翻自 陈冠希） ', 'singer': "'杨飞机'", 'label': "'华语、'流行、'浪漫、'说唱、伤感、伤感'、华语'、日语、治愈、流行'、浪漫'、爵士'、电子、翻唱'、说唱、韩语'"}, {'songid': '409646757', 'songname': 'ronin of the crypt', 'singer': "'shinigami ₆⁶₆'", 'label': "'欧美、'舞曲、'说唱、欧美、电子、电子'、说唱'、运动"}, {'songid': '1434065517', 'songname': '靠近一点', 'singer': "'BigYear大年'", 'label': "'伤感、'华语、'说唱、'说唱'、伤感'、华语、华语'、孤独'、快乐'、散步'、治愈、流行、流行'、浪漫、浪漫'、清新'、说唱、说唱'"}, {'songid': '510258310', 'songname': '小青龙&辉子\xa0-\xa0Time\xa0扒带作品', 'singer': "'DBRT'", 'label': "'流行、'说唱、00后'、伤感'、欧美'、爵士'、说唱、雷鬼"}, {'songid': '28413830', 'songname': 'Tall Ground', 'singer': "'Deluxe'", 'label': "'舞曲、'说唱、说唱'、运动、酒吧'"}, {'songid': '1378757860', 'songname': 'XIA (Prod by WayMen)', 'singer': "'歪歪C'", 'label': "'华语、'治愈、'说唱、R&amp;B/Soul'、华语、华语'、夜晚'、孤独'、快乐'、治愈、浪漫、浪漫'、说唱、说唱'"}]
+ret: {'success': True, 'error': '', 'data': ()}
+data: []
+{'success': True, 'error': '', 'data': ()}
+ready to enter recommend.initRecommend
+username nnn
+userInfor {'success': True, 'error': '', 'data': (('nnn', 'nnn', '爵士、运动、浪漫'),)}
+key_str 爵士、运动、浪漫
+key ['爵士', '运动', '浪漫']
+dictionary: {'爵士': ['1427778067', '1428313923', '1366100158', '1458626384', '1328595264', '29764356', '1419086863', '1457574364', '1343324741', '1363102862'], '运动': ['1345680410', '16855886', '18055699', '572842555', '3168416', '2900978', '1431219646', '1358329629', '1366777608', '1349213613'], '浪漫': ['447280683', '1311638085', '454954048', '458324468', '1342565810', '1345327263', '1318721017', '208902', '1413340918', '419837239']}
+quit the recommend.initRecommend
+recomSongId ['1343324741', '18055699', '1311638085', '1428313923', '1345680410', '454954048', '29764356', '16855886', '458324468']
+{'success': True, 'error': '', 'data': (('1343324741', 'Lies', "'CHXX'", '2053196853、4871653208', "'说唱、R&amp;B/Soul'、兴奋、爵士"),)}
+{'success': True, 'error': '', 'data': (('18055699', 'Hardcore Composer', "'Gang Starr'", '3028955658', "'说唱、欧美、运动'"),)}
+{'success': True, 'error': '', 'data': (('1311638085', '哄你睡觉', "'IAN-T'", '2126269011、2322980794、2356473597、2434195584、2526611776、2633763962、2649015729、2812685091、4926388301、5104174752、923565622、979183752', "'华语、'治愈、'说唱、华语、快乐'、日语、治愈'、流行'、浪漫、浪漫'、清新、网络歌曲'、说唱、说唱'、韩语'"),)}
+{'success': True, 'error': '', 'data': (('1428313923', 'Prison', "'士多啤梨少女'", '2053196853、2328059433、2548574378、4903571871', "'电子、'说唱、R&amp;B/Soul'、伤感'、另类/独立、孤独、爵士、说唱、轻音乐'"),)}
+{'success': True, 'error': '', 'data': (('1345680410', '武装罗密欧', "'李尔新', 'Ty.'", '3220806525、5200420590', "'说唱、华语'、夜晚、运动'"),)}
+{'success': True, 'error': '', 'data': (('454954048', '需要保密的情话', "'安全着陆', 'DaisyCream'", '2029498041、2445914083、2452114012、2633763962、2674683266、2787500609、2815477626、2904974388', "'00后、'浪漫、'说唱、华语'、快乐'、日语、治愈'、流行、浪漫、说唱、说唱'、轻音乐'、酒吧'、韩语'、驾车"),)}
+{'success': True, 'error': '', 'data': (('29764356', 'A Better Tomorrow', "'Wu-Tang Clan'", '2037359096、2684831779、5123838271、5138729378', "'欧美、'说唱、'说唱'、欧美'、爵士、经典'、说唱、说唱'"),)}
+{'success': True, 'error': '', 'data': (('16855886', 'Paul Revere', "'Beastie Boys'", '3028955658', "'说唱、欧美、运动'"),)}
+{'success': True, 'error': '', 'data': (('458324468', 'Melody\xa0Remix（Cover 吴海啸 / 群可）', "'林嘉莹'", '2322980794、2363512459、2423535344、2815117218、2948843083、4926388301、832595290、990015063', "'00后、'华语、'治愈、'流行、'说唱、'说唱'、华语、古风'、流行、浪漫、浪漫'、游戏'、网络歌曲'、说唱、说唱'"),)}[12/Sep/2020 15:46:44] "GET /Recommendsong/ HTTP/1.1" 200 7668
+[12/Sep/2020 15:46:47] "GET /personCenter/ HTTP/1.1" 200 4555
+[12/Sep/2020 15:53:47] "GET /searchSong HTTP/1.1" 301 0
+[12/Sep/2020 15:54:13] "GET /hotSong HTTP/1.1" 301 0
+Not Found: /
+[12/Sep/2020 20:08:13] "GET / HTTP/1.1" 404 3385
+Not Found: /http:/www.baidu.com/cache/global/img/gs.gif
+[12/Sep/2020 22:22:14] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 404 1742
+----------------------------------------
+Exception happened during processing of request from ('80.82.70.187', 52060)
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.8/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/root/anaconda3/lib/python3.8/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/root/anaconda3/lib/python3.8/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/root/anaconda3/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 174, in handle
+    self.handle_one_request()
+  File "/root/anaconda3/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 182, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/root/anaconda3/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('202.98.13.19', 11908)
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.8/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/root/anaconda3/lib/python3.8/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/root/anaconda3/lib/python3.8/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/root/anaconda3/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 172, in handle
+    self.handle_one_request()
+  File "/root/anaconda3/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 182, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/root/anaconda3/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[13/Sep/2020 00:45:17] "GET /sign_in/ HTTP/1.1" 200 3546
+[13/Sep/2020 00:45:18] "GET /static/musicsRecommend/vue.js HTTP/1.1" 304 0
+[13/Sep/2020 00:45:18] "GET /static/musicsRecommend/index.js HTTP/1.1" 304 0
+[13/Sep/2020 00:45:18] "GET /static/musicsRecommend/index.css HTTP/1.1" 304 0
+[13/Sep/2020 00:45:18] "GET /static/musicsRecommend/jquery.min.js HTTP/1.1" 304 0
+Not Found: /favicon.ico
+[13/Sep/2020 00:45:22] "GET /favicon.ico HTTP/1.1" 404 3436
+[13/Sep/2020 00:45:23] "POST /login/ HTTP/1.1" 200 55
+[13/Sep/2020 00:45:33] "POST /login/ HTTP/1.1" 200 55
+[13/Sep/2020 00:45:39] "GET /register/ HTTP/1.1" 200 6330
+[13/Sep/2020 00:45:39] "GET /static/musicsRecommend/register.css HTTP/1.1" 304 0
+[13/Sep/2020 00:45:39] "GET /static/musicsRecommend/register.jpg HTTP/1.1" 304 0
+[13/Sep/2020 00:45:45] "POST /usernameExist/ HTTP/1.1" 200 30
+[13/Sep/2020 00:45:45] "POST /addUserInformation/ HTTP/1.1" 200 42
+[13/Sep/2020 00:45:46] "GET /sign_in/ HTTP/1.1" 200 3546
+[13/Sep/2020 00:45:50] "POST /login/ HTTP/1.1" 200 30
+[13/Sep/2020 00:45:51] "GET /personCenter/ HTTP/1.1" 200 4555
+[13/Sep/2020 00:45:51] "GET /static/musicsRecommend/layui/css/layui.css HTTP/1.1" 304 0
+[13/Sep/2020 00:45:51] "GET /static/musicsRecommend/main.css HTTP/1.1" 304 0
+[13/Sep/2020 00:45:51] "GET /static/musicsRecommend/jquery-3.5.1.js HTTP/1.1" 304 0
+[13/Sep/2020 00:45:51] "GET /static/musicsRecommend/layui/layui.js HTTP/1.1" 304 0
+[13/Sep/2020 00:45:51] "GET /static/musicsRecommend/layui/font/iconfont.woff2?v=256 HTTP/1.1" 304 0
+[13/Sep/2020 00:45:52] "GET /Recommendsong/ HTTP/1.1" 200 7259
+[13/Sep/2020 00:45:52] "GET /static/musicsRecommend/layui/lay/modules/layer.js HTTP/1.1" 304 0
+[13/Sep/2020 00:45:52] "GET /static/musicsRecommend/layui/layui.all.js HTTP/1.1" 304 0
+[13/Sep/2020 00:45:52] "GET /static/musicsRecommend/jquery-3.5.1.min.js HTTP/1.1" 304 0
+[13/Sep/2020 00:45:53] "GET /static/musicsRecommend/layui/css/modules/laydate/default/laydate.css?v=5.0.9 HTTP/1.1" 304 0
+[13/Sep/2020 00:45:53] "GET /static/musicsRecommend/layui/css/modules/layer/default/layer.css?v=3.1.1 HTTP/1.1" 304 0
+[13/Sep/2020 00:45:53] "GET /static/musicsRecommend/layui/css/modules/code.css HTTP/1.1" 304 0
+[13/Sep/2020 00:45:55] "GET /personCenter/ HTTP/1.1" 200 4555
+[13/Sep/2020 00:45:56] "GET /searchSong/ HTTP/1.1" 200 5548
+[13/Sep/2020 00:45:57] "GET /hotSong/ HTTP/1.1" 200 3883
+
+[{'songid': '1343324741', 'songname': 'Lies', 'singer': "'CHXX'", 'label': "'说唱、R&amp;B/Soul'、兴奋、爵士"}, {'songid': '18055699', 'songname': 'Hardcore Composer', 'singer': "'Gang Starr'", 'label': "'说唱、欧美、运动'"}, {'songid': '1311638085', 'songname': '哄你睡觉', 'singer': "'IAN-T'", 'label': "'华语、'治愈、'说唱、华语、快乐'、日语、治愈'、流行'、浪漫、浪漫'、清新、网络歌曲'、说唱、说唱'、韩语'"}, {'songid': '1428313923', 'songname': 'Prison', 'singer': "'士多啤梨少女'", 'label': "'电子、'说唱、R&amp;B/Soul'、伤感'、另类/独立、孤独、爵士、说唱、轻音乐'"}, {'songid': '1345680410', 'songname': '武装罗密欧', 'singer': "'李尔新', 'Ty.'", 'label': "'说唱、华语'、夜晚、运动'"}, {'songid': '454954048', 'songname': '需要保密的情话', 'singer': "'安全着陆', 'DaisyCream'", 'label': "'00后、'浪漫、'说唱、华语'、快乐'、日语、治愈'、流行、浪漫、说唱、说唱'、轻音乐'、酒吧'、韩语'、驾车"}, {'songid': '29764356', 'songname': 'A Better Tomorrow', 'singer': "'Wu-Tang Clan'", 'label': "'欧美、'说唱、'说唱'、欧美'、爵士、经典'、说唱、说唱'"}, {'songid': '16855886', 'songname': 'Paul Revere', 'singer': "'Beastie Boys'", 'label': "'说唱、欧美、运动'"}, {'songid': '458324468', 'songname': 'Melody\xa0Remix（Cover 吴海啸 / 群可）', 'singer': "'林嘉莹'", 'label': "'00后、'华语、'治愈、'流行、'说唱、'说唱'、华语、古风'、流行、浪漫、浪漫'、游戏'、网络歌曲'、说唱、说唱'"}]
+ret: {'success': True, 'error': '', 'data': ()}
+data: []
+params: {'username': 'zzz'}
+ret: {'success': True, 'error': '', 'data': ''}
+login函数中
+zzz
+True
+ret: {'success': True, 'error': '', 'data': ()}
+data: []
+{'success': True, 'error': '', 'data': ()}
+ready to enter recommend.initRecommend
+username zzz
+userInfor {'success': True, 'error': '', 'data': (('zzz', 'zzz', '欧美、爵士、华语'),)}
+key_str 欧美、爵士、华语
+key ['欧美', '爵士', '华语']
+dictionary: {'欧美': ['1367786419', '29849336', '16421443', '1378455425', '507795222', '443875650', '1417637336', '1305040565', '27363857', '1378397466'], '爵士': ['1406576462', '1316905050', '550513975', '1360496171', '1421780541', '1339332327', '540384911', '1315356547', '1412282384', '1441141230'], '华语': ['1311134099', '1399249401', '31877242', '443716989', '1352483068', '1430517572', '1406533600', '27186869', '138999', '27562134']}
+quit the recommend.initRecommend
+recomSongId ['27363857', '540384911', '443716989', '1417637336', '1315356547', '1406533600', '1367786419', '1441141230', '1430517572']
+{'success': True, 'error': '', 'data': (('27363857', 'Gone', "'Donnis'", '3233774888', "'欧美、说唱、榜单'"),)}
+{'success': True, 'error': '', 'data': (('540384911', 'Psycho\xa0Remix\xa0带副歌伴奏', "'雍和'", '2053196853、2471792593、2540800932、2721633452、4858155309', "'说唱、R&amp;B/Soul'、伤感'、流行、爵士、爵士'、电子'、雷鬼"),)}
+{'success': True, 'error': '', 'data': (('443716989', '如果', "'Cola', 'Dobi'", '2126269011、2218631074、2434195584、2545344889、2923714434、5104174752、814839177', "'华语、'流行、'说唱、华语'、快乐'、流行、流行'、浪漫、浪漫'、说唱、说唱'"),)}
+{'success': True, 'error': '', 'data': (('1417637336', 'How It Is', "'Malz Monday'", '5092484525', "'欧美、游戏、说唱'"),)}
+{'success': True, 'error': '', 'data': (('1315356547', '[Free]"She\'s gone"', "'97Virus'", '2317312244、2328059433、2471792593、2540800932、2721633452、3172934994、4864893732', "'流行、'说唱、90后'、伤感、伤感'、孤独、孤独'、流行、爵士'、电子、电子'、说唱'、雷鬼"),)}
+{'success': True, 'error': '', 'data': (('1406533600', '赤脚追光 (伴奏)', "'R1SE'", '3091004447', "'华语、流行、说唱'"),)}
+{'success': True, 'error': '', 'data': (('1367786419', '虚构的爱情故事', "'队长'", '2438241393', "'说唱、华语、欧美'"),)}
+{'success': True, 'error': '', 'data': (('1441141230', '【Free】Japanese “Ambitious man”', "'Dream_Beggar'", '2471792593', "'说唱、雷鬼、爵士'"),)}
+{'success': True, 'error': '', 'data': (('1430517572', '无术II', "'夏国文'", '2773489263', "'华语、说唱、孤独'"),)}
+[{'songid': '27363857', 'songname': 'Gone', 'singer': "'Donnis'", 'label': "'欧美、说唱、榜单'"}, {'songid': '540384911', 'songname': 'Psycho\xa0Remix\xa0带副歌伴奏', 'singer': "'雍和'", 'label': "'说唱、R&amp;B/Soul'、伤感'、流行、爵士、爵士'、电子'、雷鬼"}, {'songid': '443716989', 'songname': '如果', 'singer': "'Cola', 'Dobi'", 'label': "'华语、'流行、'说唱、华语'、快乐'、流行、流行'、浪漫、浪漫'、说唱、说唱'"}, {'songid': '1417637336', 'songname': 'How It Is', 'singer': "'Malz Monday'", 'label': "'欧美、游戏、说唱'"}, {'songid': '1315356547', 'songname': '[Free]"She\'s gone"', 'singer': "'97Virus'", 'label': "'流行、'说唱、90后'、伤感、伤感'、孤独、孤独'、流行、爵士'、电子、电子'、说唱'、雷鬼"}, {'songid': '1406533600', 'songname': '赤脚追光 (伴奏)', 'singer': "'R1SE'", 'label': "'华语、流行、说唱'"}, {'songid': '1367786419', 'songname': '虚构的爱情故事', 'singer': "'队长'", 'label': "'说唱、华语、欧美'"}, {'songid': '1441141230', 'songname': '【Free】Japanese “Ambitious man”', 'singer': "'Dream_Beggar'", 'label': "'说唱、雷鬼、爵士'"}, {'songid': '1430517572', 'songname': '无术II', 'singer': "'夏国文'", 'label': "'华语、说唱、孤独'"}]
+ret: {'success': True, 'error': '', 'data': ()}
+data: []
+{'success': True, 'error': '', 'data': ()}
+ready to enter recommend.initRecommend
+username zzz
+userInfor {'success': True, 'error': '', 'data': (('zzz', 'zzz', '欧美、爵士、华语'),)}
+key_str 欧美、爵士、华语
+key ['欧美', '爵士', '华语']
+dictionary: {'欧美': ['526472556', '1432436524', '1313323346', '1385489989', '33991174', '19373789', '529661090', '1391788855', '2614003', '1377145065'], '爵士': ['1365038062', '1321626389', '1311946274', '1328376342', '1465118372', '1358068478', '1457540282', '1360416965', '1442603957', '1349750156'], '华语': ['566435267', '461463653', '1399714708', '1329976449', '1432076786', '571509989', '41641585', '22834863', '1432778629', '81670']}
+quit the recommend.initRecommend
+recomSongId ['1377145065', '1358068478', '1399714708', '1385489989', '1365038062', '1432076786', '19373789', '1321626389', '566435267']
+{'success': True, 'error': '', 'data': (('1377145065', 'Dumb', "'KOPPS'", '3033668435', "'流行、欧美、说唱'"),)}
+{'success': True, 'error': '', 'data': (('1358068478', '「FREE」孤独的黑洞', "'G.Ladio'", '2317312244、2328059433、2471792593', "'说唱、90后'、伤感'、孤独、爵士'、电子、雷鬼"),)}
+{'success': True, 'error': '', 'data': (('1399714708', '遗憾（完整版）（翻自 王佳杨） ', "'萌小新'", '2753915745', "'伤感、华语、说唱'"),)}
+{'success': True, 'error': '', 'data': (('1385489989', 'Health Food', "'Berhana'", '2852805110', "'欧美、说唱、流行'"),)}
+{'success': True, 'error': '', 'data': (('1365038062', '【Free】Speak down （BoomBap Beat）', "'Jaming Beats'", '2053196853、2238567706、2510242292、3022736345、4858155309', "'欧美、'说唱、R&amp;B/Soul'、怀旧、欧美'、爵士、经典'、说唱'"),)}
+{'success': True, 'error': '', 'data': (('1432076786', '世间美好与你环环相扣（翻自 柏松） ', "'网友小詹'", '4900028836', "'华语、说唱、翻唱'"),)}
+{'success': True, 'error': '', 'data': (('19373789', 'If I Die 2Nite', "'Tupac'", '5003384883', "'欧美、说唱、R&amp;B/Soul'"),)}
+{'success': True, 'error': '', 'data': (('1321626389', '[FREE] Stay Here', "'CHXX'", '2053196853、2317312244、2721633452、2891787274', "'说唱、90后'、R&amp;B/Soul'、流行、爵士、电子、电子'"),)}
+{'success': True, 'error': '', 'data': (('566435267', 'Fendiman', "'王嘉尔'", '2011154998、2423939332、2674683266、2740410791、2964707012、3081115419、5188423285、5198853550、544798906', "'00后、'华语、'欧美、'流行、'说唱、R&amp;B/Soul'、学习'、快乐'、摇滚'、欧美、流行、清新'、说唱、说唱'、驾车'"),)}[13/Sep/2020 00:45:58] "GET /Recommendsong/ HTTP/1.1" 200 7352
+[13/Sep/2020 00:46:01] "GET /searchSong/ HTTP/1.1" 200 5548
+[13/Sep/2020 00:46:03] "POST /search/ HTTP/1.1" 200 2161
+[13/Sep/2020 00:46:12] "POST /addSongToCenter/ HTTP/1.1" 200 17
+[13/Sep/2020 00:46:15] "GET /personCenter/ HTTP/1.1" 200 5265
+[13/Sep/2020 00:47:10] "GET /Recommendsong/ HTTP/1.1" 200 7303
+[13/Sep/2020 00:47:47] "POST /addSongToCenter/ HTTP/1.1" 200 17
+
+[{'songid': '1377145065', 'songname': 'Dumb', 'singer': "'KOPPS'", 'label': "'流行、欧美、说唱'"}, {'songid': '1358068478', 'songname': '「FREE」孤独的黑洞', 'singer': "'G.Ladio'", 'label': "'说唱、90后'、伤感'、孤独、爵士'、电子、雷鬼"}, {'songid': '1399714708', 'songname': '遗憾（完整版）（翻自 王佳杨） ', 'singer': "'萌小新'", 'label': "'伤感、华语、说唱'"}, {'songid': '1385489989', 'songname': 'Health Food', 'singer': "'Berhana'", 'label': "'欧美、说唱、流行'"}, {'songid': '1365038062', 'songname': '【Free】Speak down （BoomBap Beat）', 'singer': "'Jaming Beats'", 'label': "'欧美、'说唱、R&amp;B/Soul'、怀旧、欧美'、爵士、经典'、说唱'"}, {'songid': '1432076786', 'songname': '世间美好与你环环相扣（翻自 柏松） ', 'singer': "'网友小詹'", 'label': "'华语、说唱、翻唱'"}, {'songid': '19373789', 'songname': 'If I Die 2Nite', 'singer': "'Tupac'", 'label': "'欧美、说唱、R&amp;B/Soul'"}, {'songid': '1321626389', 'songname': '[FREE] Stay Here', 'singer': "'CHXX'", 'label': "'说唱、90后'、R&amp;B/Soul'、流行、爵士、电子、电子'"}, {'songid': '566435267', 'songname': 'Fendiman', 'singer': "'王嘉尔'", 'label': "'00后、'华语、'欧美、'流行、'说唱、R&amp;B/Soul'、学习'、快乐'、摇滚'、欧美、流行、清新'、说唱、说唱'、驾车'"}]
+收到的歌曲名:Dumb
+ret['data'] (('1331128378', 'Dumb Show 哑剧', "'范丞丞'", "'华语、'流行、'说唱、R&amp;B/Soul'、华语'、流行、舞曲'、说唱、说唱'"), ('1350079865', 'Dumb Show (伴奏)', "'范丞丞'", "'华语、流行、说唱'"), ('1377145065', 'Dumb', "'KOPPS'", "'流行、欧美、说唱'"), ('1404314', 'Vild (Deaf, Dumb and Blind)', "'Gil Scott-Heron'", "'欧美、R&amp;B/Soul、说唱'"), ('1421040620', 'dumb', "'luvbackpack'", "'说唱、朋克、舞曲'"), ('1431111998', 'Decap-SUMMER&R&B（free beat)（Dumb Ass Donkey remix）', "'Dumb Ass Donkey'", "'说唱、流行、华语'"), ('22835411', 'You Know How We Do (prod.LODEF) feat. Dumbfoundead', "'朴宰范'", "'流行、说唱'"), ('26441575', 'Outro(Dumb & Dumber)', "'Rayzed Hoodz'", "'说唱'"), ('29418323', 'Dumb For You', "'Hoodie Allen'", "'欧美、说唱、R&amp;B/Soul'"), ('423776933', 'Dumbo - Lil Live', "'DJ COKE'", "'欧美、流行、说唱'"), ('438456662', 'DUMB (Prod. $uijin)', "'TORCHFVCE', 'WXLFE'", "'欧美、'说唱、欧美、电子、说唱'、驾车'"), ('462895657', 'Young Dumb & Broke', "'Khalid'", "'欧美、'说唱、R&amp;B/Soul、R&amp;B/Soul'、伤感'、治愈、流行、浪漫'、说唱、说唱'"))
+data [{'songid': '1331128378', 'songname': 'Dumb Show 哑剧', 'singer': "'范丞丞'", 'label': "'华语、'流行、'说唱、R&amp;B/Soul'、华语'、流行、舞曲'、说唱、说唱'"}, {'songid': '1350079865', 'songname': 'Dumb Show (伴奏)', 'singer': "'范丞丞'", 'label': "'华语、流行、说唱'"}, {'songid': '1377145065', 'songname': 'Dumb', 'singer': "'KOPPS'", 'label': "'流行、欧美、说唱'"}, {'songid': '1404314', 'songname': 'Vild (Deaf, Dumb and Blind)', 'singer': "'Gil Scott-Heron'", 'label': "'欧美、R&amp;B/Soul、说唱'"}, {'songid': '1421040620', 'songname': 'dumb', 'singer': "'luvbackpack'", 'label': "'说唱、朋克、舞曲'"}, {'songid': '1431111998', 'songname': 'Decap-SUMMER&R&B（free beat)（Dumb Ass Donkey remix）', 'singer': "'Dumb Ass Donkey'", 'label': "'说唱、流行、华语'"}, {'songid': '22835411', 'songname': 'You Know How We Do (prod.LODEF) feat. Dumbfoundead', 'singer': "'朴宰范'", 'label': "'流行、说唱'"}, {'songid': '26441575', 'songname': 'Outro(Dumb & Dumber)', 'singer': "'Rayzed Hoodz'", 'label': "'说唱'"}, {'songid': '29418323', 'songname': 'Dumb For You', 'singer': "'Hoodie Allen'", 'label': "'欧美、说唱、R&amp;B/Soul'"}, {'songid': '423776933', 'songname': 'Dumbo - Lil Live', 'singer': "'DJ COKE'", 'label': "'欧美、流行、说唱'"}, {'songid': '438456662', 'songname': 'DUMB (Prod. $uijin)', 'singer': "'TORCHFVCE', 'WXLFE'", 'label': "'欧美、'说唱、欧美、电子、说唱'、驾车'"}, {'songid': '462895657', 'songname': 'Young Dumb & Broke', 'singer': "'Khalid'", 'label': "'欧美、'说唱、R&amp;B/Soul、R&amp;B/Soul'、伤感'、治愈、流行、浪漫'、说唱、说唱'"}]
+add Song to personal center
+params[data]: [{'id': '1331128378'}, {'id': '1350079865'}]
+{'success': True, 'error': ''}
+zzz
+{'success': True, 'error': ''}
+zzz
+ret: {'success': True, 'error': '', 'data': (('1331128378',), ('1350079865',))}
+data: [{'id': '1331128378', 'songname': 'Dumb Show 哑剧', 'singer': "'范丞丞'", 'song_sheet_name': '2070299050、2070820359、2143445017、2334294410、2656667116', 'label': "'华语、'流行、'说唱、R&amp;B/Soul'、华语'、流行、舞曲'、说唱、说唱'"}, {'id': '1350079865', 'songname': 'Dumb Show (伴奏)', 'singer': "'范丞丞'", 'song_sheet_name': '2656667116', 'label': "'华语、流行、说唱'"}]
+{'success': True, 'error': '', 'data': (('1331128378',), ('1350079865',))}
+recomSongId [1331128378, 1370858194, 1370858195, 1370859061, 1331129156, 1346079558, 1352818863, 1355928110]
+[{'songid': 1331128378, 'songname': 'Dumb Show 哑剧', 'singer': "'范丞丞'", 'label': "'华语、'流行、'说唱、R&amp;B/Soul'、华语'、流行、舞曲'、说唱、说唱'"}, {'songid': 1370858194, 'songname': 'Dip Out', 'singer': "'范丞丞'", 'label': "'华语、'流行、'说唱、R&amp;B/Soul'、华语'、流行、舞曲'、说唱、说唱'"}, {'songid': 1370858195, 'songname': 'Finesse', 'singer': "'范丞丞'", 'label': "'华语、'流行、'说唱、R&amp;B/Soul'、华语'、流行、舞曲'、说唱、说唱'"}, {'songid': 1370859061, 'songname': 'Straight (feat.艾福杰尼)', 'singer': "'范丞丞', '艾福杰尼'", 'label': "'华语、'流行、'说唱、R&amp;B/Soul'、华语'、流行、舞曲'、说唱、说唱'"}, {'songid': 1331129156, 'songname': 'After Leaving 离开以后', 'singer': "'黄明昊 (Justin)'", 'label': "'华语、'流行、R&amp;B/Soul'、流行、舞曲'、说唱、说唱'"}, {'songid': 1346079558, 'songname': '没有意外', 'singer': "'蔡徐坤'", 'label': "'华语、'流行、R&amp;B/Soul'、流行、舞曲'、说唱、说唱'"}, {'songid': 1352818863, 'songname': 'Bigger', 'singer': "'蔡徐坤'", 'label': "'华语、'流行、R&amp;B/Soul'、流行、舞曲'、说唱、说唱'"}, {'songid': 1355928110, 'songname': "You're My Light", 'singer': "'朱正廷'", 'label': "'华语、'流行、R&amp;B/Soul'、流行、舞曲'、说唱、说唱'"}]
+add Song to personal center
+params[data]: [{'id': '1370858195'}, {'id': '1370859061'}, {'id': '1331129156'}, {'id': '1346079558'}]
+{'success': True, 'error': ''}
+zzz
+{'success': True, 'error': ''}
+zzz
+{'success': True, 'error': ''}
+zzz
+{'success': True, 'error': ''}
+zzz
+ret: {'success': True, 'error': '', 'data': (('1331128378',), ('1331129156',), ('1346079558',), ('1350079865',), ('1370858195',), ('1370859061',))}
+data: [{'id': '1331128378', 'songname': 'Dumb Show 哑剧', 'singer': "'范丞丞'", 'song_sheet_name': '2070299050、2070820359、2143445017、2334294410、2656667116', 'label': "'华语、'流行、'说唱、R&amp;B/Soul'、华语'、流行、舞曲'、说唱、说唱'"}, {'id': '1331129156', 'songname': 'After Leaving 离开以后', 'singer': "'黄明昊 (Justin)'", 'song_sheet_name': '2070299050、2143445017、2334294410、2656667116', 'label': "'华语、'流行、R&amp;B/Soul'、流行、舞曲'、说唱、说唱'"}, {'id': '1346079558', 'songname': '没有意外', 'singer': "'蔡徐坤'", 'song_sheet_name': '2070299050、2143445017、2334294410、2656667116', 'label': "'华语、'流行、R&amp;B/Soul'、流行、舞曲'、说唱、说唱'"}, {'id': '1350079865', 'songname': 'Dumb Show (伴奏)', 'singer': "'范丞丞'", 'song_sheet_name': '2656667116', 'label': "'华语、流行、说唱'"}, {'id': '1370858195', 'songname': 'Finesse', 'singer': "'范丞丞'", 'song_sheet_name': '2070299050、2070820359、2143445017、2334294410、2656667116', 'label': "'华语、'流行、'说唱、R&amp;B/Soul'、华语'、流行、舞曲'、说唱、说唱'"}, {'id': '1370859061', 'songname': 'Straight (feat.艾福杰尼)', 'singer': "'范丞丞', '艾福杰尼'", 'song_sheet_name': '2070299050、2070820359、2143445017、2334294410、2656667116、4882425536', 'label': "'华语、'流行、'说唱、R&amp;B/Soul'、华语'、流行、舞曲'、说唱、说唱'"}][13/Sep/2020 00:47:50] "GET /personCenter/ HTTP/1.1" 200 6853
+[13/Sep/2020 00:47:59] "POST /deleteSongFromCenter/ HTTP/1.1" 200 17
+[13/Sep/2020 00:48:02] "GET /personCenter/ HTTP/1.1" 200 4994
+[13/Sep/2020 00:48:06] "GET /personCenter/ HTTP/1.1" 200 4994
+[13/Sep/2020 00:48:06] "GET /searchSong/ HTTP/1.1" 200 5548
+[13/Sep/2020 00:48:07] "GET /hotSong/ HTTP/1.1" 200 3883
+[13/Sep/2020 00:48:55] "GET /Recommendsong/ HTTP/1.1" 200 7262
+[13/Sep/2020 00:49:09] "GET /personCenter/ HTTP/1.1" 200 4994
+[13/Sep/2020 00:49:13] "GET /exit/ HTTP/1.1" 200 3546
+[13/Sep/2020 00:49:17] "POST /login/ HTTP/1.1" 200 30
+[13/Sep/2020 00:49:18] "GET /personCenter/ HTTP/1.1" 200 4994
+[13/Sep/2020 00:50:06] "GET /Recommendsong/ HTTP/1.1" 200 7262
+[13/Sep/2020 00:50:18] "GET /sign_in/ HTTP/1.1" 200 3546
+[13/Sep/2020 00:50:18] "GET /static/musicsRecommend/vue.js HTTP/1.1" 304 0
+[13/Sep/2020 00:50:18] "GET /static/musicsRecommend/index.css HTTP/1.1" 304 0
+[13/Sep/2020 00:50:18] "GET /static/musicsRecommend/index.js HTTP/1.1" 304 0
+[13/Sep/2020 00:50:18] "GET /static/musicsRecommend/jquery.min.js HTTP/1.1" 304 0
+Not Found: /favicon.ico
+[13/Sep/2020 00:50:19] "GET /favicon.ico HTTP/1.1" 404 3436
+[13/Sep/2020 00:50:23] "GET /exit/ HTTP/1.1" 200 3546
+[13/Sep/2020 00:50:28] "POST /login/ HTTP/1.1" 200 55
+[13/Sep/2020 00:50:49] "POST /login/ HTTP/1.1" 200 30
+[13/Sep/2020 00:50:50] "GET /personCenter/ HTTP/1.1" 200 4994
+[13/Sep/2020 00:50:54] "GET /exit/ HTTP/1.1" 200 3546

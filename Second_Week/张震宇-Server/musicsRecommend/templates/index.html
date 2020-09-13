@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>登录界面</title>
+		<script src="{% static 'musicsRecommend/vue.js' %}" type="text/javascript" charset="utf-8"></script>
+		<script src="{% static 'musicsRecommend/index.js' %}" type="text/jscript" charset="UTF-8"></script>
+		<link rel="stylesheet" type="text/css" href="{% static 'musicsRecommend/index.css' %}" />
+		<style>
+			*{
+				margin: 0px;padding: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="ops-login-header">
+			<div class="ops-logo ops-main-content">
+				<ul class="ops-login-header-linker">
+					<li><a href="#">关于我们</a></li>
+					<li><a href="#">帮助中心</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="login-bd" class="ops-login-bd">
+			<div class="ops-main-content">
+				<div class="ops-input-box">
+					<div class="ops-input-title">
+						<h2>用户登录</h2>
+					</div>
+					<div class="ops-input-area">
+						<form>
+							<div class="ops-input-item">
+								<p>登录名：</p>
+								<input type="text" id="username" placeholder="请输入用户名" />
+								<span id="helpBlock1" class="help-block">用户名不能为空</span>
+							</div>
+
+							<div class="ops-input-item">
+								<p>登录密码：</p>
+								<input type="password" id="password" placeholder="请输入密码" />
+								<span id="helpBlock2" class="help-block">密码不能为空</span>
+							</div>
+							<span id="helpBlock3" class="help-block">用户名或密码错误</span>
+							<div class="ops-input-item">
+								<input style="line-height：50px;width: 20px;height: 20px;" type="checkbox" id="remember-psw" 
+								 lay-skin="primary">
+								<span style="line-height：10px ;">记录密码</span>
+							</div>
+							<div class="ops-login-btn" onclick="loginCheck();">登录</div>
+							</br>
+							<!-- 此处修改注册 -->
+							<div class="ops-login-btn" onclick="loginCheck();">注册</div>
+						</form>
+						<p class="ops-input-other"><a href="#">联系我们</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="login-footer" class="ops-login-footer">
+			<div class="ops-footer-copyright">
+				<p class="ops-clearfix ops-links">
+					<a href="javascript:;" target="_blank">关于我们</a>
+					<a href="javascript:;" target="_blank">法律声明</a>
+					<a href="javascript:;" target="_blank">服务条款</a>
+					<a href="javascript:;" target="_blank">联系方式</a>
+					<p style="font-family:arial;">地址：吉林大学&nbsp;&nbsp;12345667许可证B1-20160901&nbsp;&nbsp;COPYRIGHT&nbsp;&nbsp;©&nbsp;
+						2020-2021<a href="http://jlu.edu.cn">jlumaker</a>&nbsp;版权所有&nbsp;ICP证：苏A2-20160101</p>
+					<p style="font-family:arial;">被迫营业许可证B1-20150962&nbsp;&nbsp;吉大学子&nbsp;&nbsp;版权所有</p>
+				</p>
+			</div>
+		</div>
+	</body>
+</html>

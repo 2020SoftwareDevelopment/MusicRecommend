@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <script src="{% static 'musicsRecommend/jquery.min.js' %}"></script>
+    <script>
+        function signup(){
+            let username=document.querySelector("#username").value
+            let password=document.querySelector("#password").value
+            let label="111"
+            console.log("signup函数")
+            $.ajax({
+				url:"/usernameExist/",
+				type:"POST",
+				data:JSON.stringify({"username" : username}),
+				dataType:"json",
+				success: function(msg){
+                    console.log(msg)
+                    if(msg["success"]==true){
+                        console.log("success return 下面进入addUserInformation函数")
+                        addUserInformation()
+                    }
+                    else{
+                        alert("error:"+msg["error"])
+                    }
+				}
+			});
+        }
+        function addUserInformation(){
+            console.log("已经进入了addUserInformation函数")
+            let username=document.querySelector("#username").value
+            let password=document.querySelector("#password").value
+            let label="1111"
+            $.ajax({
+                url:"/addUserInformation/",
+                type:"POST",
+                data:JSON.stringify({
+                    "username":username,
+                    "password":password,
+                    "label":"111"
+                }),
+                dataType:"json",
+                success:function(msg){
+                    console.log(msg)
+                    if(msg["success"]==true){
+                        console.log("信息加入正确")
+                        window.location.href="/sign_in/"
+                    }
+                    else{
+                        alert("error:"+msg["error"])
+                    }
+                }
+            })
+            console.log("准备进入/sign_in/")
+            window.location.href="/sign_in/"
+        }
+    </script>
+</head>
+<body>
+    <form action = "" method = "GET" name = "sign up" onsubmit = "return false">
+        <h1>Sign up to Music Recommendation System</h1>
+        <table>
+                <td>
+                    <label for = "username">用户名：</label>
+                </td>
+                <td>
+                    <input type = "text" name = "username" value = "请填写注册的用户名" id = "username"/>
+                </td>
+                <td>
+                    *用户名由字母和数字组成，由字母开头，不得超过20个字符
+                </td>
+            </tr>
+                <td>
+                    <label for = "password">密码：</label>
+                </td>
+                <td>
+                    <input type = "password" name = "password" id = "password"/>
+                </td>
+                <td>
+                    *密码由字母和数字组合而成
+                </td>
+            </tr>
+            <tr>
+                <td colspan = "2">
+                    <input type = "submit" value = "完成注册" onclick="signup()"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

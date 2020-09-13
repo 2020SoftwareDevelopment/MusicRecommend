@@ -1,0 +1,153 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>PersonalCenter</title>
+		<link rel="stylesheet" href="{% static 'musicsRecommend/layui/css/layui.css' %}">
+		<link rel="stylesheet" href="{% static 'musicsRecommend/main.css' %}">
+		<script src="{% static 'musicsRecommend/jquery.min.js' %}"></script>
+		<script type="text/JavaScript" src="{% static 'musicsRecommend/jquery-3.5.1.js' %}" charset="utf-8"></script>
+		<script>
+			function personcenter(){
+				window.location.href="/personCenter/"
+			}
+			function hotSong(){
+				window.location.href="/hotSong/"
+			}
+			function personRecommend(){
+				window.location.href="/Recommendsong/"
+			}
+			function exit(){
+				window.location.href="/exit/"
+			}
+			function searchSong(){
+				window.location.href="/searchSong/"
+			}
+		</script>
+	</head>
+	<body class="layui-layout-body">
+		<div class="layui-layout layui-layout-admin">
+			<div class="layui-header box-shadow" style="background-color: white;">
+				<div class="layui-logo" style="background-color: #393D49;color: white;">小郭音乐推荐系统</div>
+				<ul class="layui-nav layui-layout-right">
+					<!-- <li class="layui-nav-item">
+						<a id="t1" href="javascript:;" class="layui-icon layui-icon-username" style="color: black;">
+							{{name}}
+						</a>
+					</li> -->
+					<li class="layui-nav-item"><a  onclick="exit()" class="layui-icon layui-icon-logout" style="color: black;">exit</a></li>
+				</ul>
+			</div>
+
+			<div class="layui-side layui-bg-black">
+				<div class="layui-side-scroll">
+					<!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+					<ul class="layui-nav layui-nav-tree" lay-filter="test">
+						<hr class="layui-bg-green" style="height: 5px;" />
+						<li class="layui-nav-item">
+							<a onclick="personcenter()">personcenter</a>
+						</li>
+						<li class="layui-nav-item">
+							<a onclick="searchSong()">searchSong</a>
+						</li>
+						<li class="layui-nav-item">
+							<a onclick="hotSong()">hotSong</a>
+						</li>
+						<li class="layui-nav-item">
+							<a onclick="personRecommend()">personRecommend</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="layui-body">
+				<div id="box2" style="margin-top:0px;">
+					<!-- 内容主体区域 -->
+					<!-- 新患者 -->
+					<div id="G1" style="padding: 15px; background-color: #F2F2F2;display: block;">
+						<div class="layui-row layui-col-space15">
+							<div class="layui-col-md12">
+								<div class="layui-card" style="box-shadow: 5px 5px 5px -5px #2F4056;">
+									<div class="layui-card-header">User personal song sheet</div>
+									<!-- 从这增加表格 -->
+									
+									<table class="layui-table"  id="tab2">
+										<colgroup>
+											<col width="20">
+											<col width="50">
+											<col width="100">
+											<col width="100">
+											<col width="100">
+										</colgroup>
+										<thead>
+											<tr>
+												<th><input type="checkbox" id="selectall"/></th>
+												<th>songid</th>
+												<th>songname</th>
+												<th>singer</th>
+												<th>label</th>
+											</tr>
+										</thead>
+										<tr>
+											{% for g in data %}
+											<tr>
+												<td><input type="checkbox"/></td>
+												<td id='id'>{{g.id}}</td>
+												<td id='songname'>{{g.songname}}</td>
+												<td id='singer'>{{g.singer}}</td>
+												<td id='label'>{{g.label}}</td>
+											</tr>
+											{% endfor %}
+										</tr>
+									</table>
+									<button class="layui-btn" id="outall" style="margin-left: 425px;" @click="deleteSongFromCenter">从个人歌单删除</button>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<script src="{% static 'musicsRecommend/vue.js' %}"></script>
+			<script src="{% static 'musicsRecommend/layui/layui.js' %}"></script>
+			<!-- 添加脚本 -->
+			<script>
+				let v=new Vue({
+					el:"#box2",
+					data:{},
+					methods:{
+						deleteSongFromCenter:function(){
+							let tableobj=$("#tab2")
+							console.log(tableobj)
+							let check=$("#tab2 input[type=checkbox]:checked")
+							console.log(check)
+							let data2=[]
+							check.each(function(){
+								let row=$(this).parent("td").parent("tr")
+								let songid=$(row).children("#id").text()
+								data2.push({"songid":songid})
+							})
+							console.log(data2)
+							$.ajax({
+								url:'/deleteSongFromCenter/',
+								type:"POST",
+								data:JSON.stringify({"data":data2}),
+								dataType:"json",
+								success:function(msg){
+									if(msg.success==true){
+										alert("Songs has been added into the database successfully")
+										//window.location.href="/personCenter/"
+									}
+									else{
+										alert("Server has some error, please wait.")
+									}
+								}
+							})
+						}
+					}
+				})
+			</script>
+	</body>
+</html>

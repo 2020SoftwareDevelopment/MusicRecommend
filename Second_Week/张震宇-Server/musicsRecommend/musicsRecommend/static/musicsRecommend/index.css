@@ -1,0 +1,185 @@
+.ops-logo {
+	height: 74px;
+	line-height: 74px;
+}
+
+.ops-main-content {
+	margin: 0 auto;
+	width: 1200px;
+}
+
+.ops-logo h1 {
+	float: left;
+}
+
+.ops-logo h1 a {
+	display: block;
+	height: 74px;
+	padding-left: 170px;
+	line-height: 80px;
+	font-weight: bold;
+	font-size: 18px;
+	color: #000;
+	background: center no-repeat;
+}
+
+.ops-logo h1 a:hover {
+	text-decoration: none;
+}
+
+.ops-logo .ops-login-header-linker {
+	float: right;
+}
+
+.ops-logo .ops-login-header-linker li {
+	float: left;
+	margin-left: 20px;
+	font-size: 12px;
+}
+
+.ops-logo .ops-login-header-linker li a {
+	color: #808080;
+}
+
+.ops-login-bd {
+	margin-bottom: 38px;
+	height: 529px;
+	background: #00a2ca;
+	/*#29a176*/
+}
+
+.ops-login-bd .ops-main-content {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background: url(http://localhost:8000/static/musicsRecommend/index.jpg) no-repeat;
+	background-position: center center;
+	background-size: cover;
+
+}
+
+.ops-login-bd .ops-input-box {
+	position: absolute;
+	right: 80px;
+	top: 50%;
+	margin-top: -200px;
+	background: #fff;
+	box-shadow: 2px 2px 3px #696363, -2px 0 3px #696363;
+}
+
+.ops-login-bd .ops-input-box .ops-input-title {
+	margin-top: 22px;
+	padding: 0 10px;
+	border-left: 4px solid #fc880c;
+	font-size: 22px;
+	color: #000;
+}
+
+.ops-login-bd .ops-input-box .ops-input-title h2 {
+	padding-bottom: 8px;
+	border-bottom: 1px solid #d9d9d9;
+	font-size: 20px;
+}
+
+.ops-login-bd .ops-input-box .ops-input-area {
+	padding: 0 22px;
+	padding-top: 20px;
+}
+
+.ops-login-bd .ops-input-box .ops-input-area .ops-input-item {
+	margin-bottom: 15px;
+}
+
+.ops-login-bd .ops-input-box .ops-input-area .ops-input-item p {
+	margin-bottom: 5px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.ops-login-bd .ops-input-box .ops-input-area .ops-input-item img {
+	cursor: pointer;
+	width: 98px;
+	height: 32px;
+}
+
+.ops-login-bd .ops-input-box .ops-input-area input {
+	padding: 0 10px;
+	border: 1px solid #cacaca;
+	width: 264px;
+	height: 32px;
+	outline: none;
+	border-radius: 3px;
+	/* background:url(../img/index.jpg) center; */
+}
+
+.ops-login-bd .ops-input-box .ops-input-area .ops-img-code {
+	float: left;
+	width: 160px;
+	margin-right: 5px;
+	border-radius: 3px;
+}
+
+.ops-login-bd .ops-input-box .ops-input-area .ops-login-btn {
+	display: block;
+	width: 100%;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	background: #00a2ca;
+	border-radius: 4px;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	font-size: 16px;
+	outline: none;
+}
+
+.ops-login-bd .ops-input-box .ops-input-other {
+	padding: 22px;
+	text-align: right;
+}
+
+.ops-login-bd .ops-input-box .ops-input-other a {
+	margin-left: 10px;
+}
+
+.ops-login-footer {
+	padding-top: 20px;
+	padding-bottom: 35px;
+	border-top: 1px solid #e5e5e5;
+	font-size: 12px;
+}
+
+.ops-login-footer .ops-footer-copyright {
+	text-align: center;
+}
+
+.ops-login-footer .ops-footer-copyright p {
+	color: #999;
+	margin-top: 10px;
+}
+
+.ops-login-footer .ops-footer-copyright p:first-child {
+	margin-top: 0px;
+}
+
+.ops-login-footer .ops-footer-copyright .ops-links a {
+	margin-left: 15px;
+	color: #666666;
+}
+
+.ops-login-footer .ops-footer-copyright .ops-links a:first-child {
+	margin-left: 0
+}
+
+span.help-block {
+	color: red !important;
+	display: none;
+}
+
+.check-box {
+	width: 2px;
+	height: 2px;
+	margin: 10px;
+	float: left;
+}

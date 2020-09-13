@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>login</title>
+		<script src="{% static 'musicsRecommend/vue.js' %}" type="text/javascript" charset="utf-8"></script>
+		<script src="{% static 'musicsRecommend/index.js' %}" type="text/jscript" charset="UTF-8"></script>
+		<script src="{% static 'musicsRecommend/jquery.min.js' %}"></script>
+		<link rel="stylesheet" type="text/css" href="{% static 'musicsRecommend/index.css' %}" />
+		<style>
+			*{
+				margin: 0px;padding: 0px;
+			}
+		</style>
+		<script>
+			function sign(){
+				let username=document.querySelector("#username").value
+				let passwd=document.querySelector("#password").value
+				$.ajax({
+					url:"/login/",
+					type:"POST",
+					data:JSON.stringify({"command":"login",
+						  "username": username, 
+						  "password": passwd
+						  }),
+					dataType:"json",
+					success: function(msg){
+						if(msg["success"]==true){
+							console.log(msg)
+							window.location.href="/personCenter/"
+						}
+						else{
+							console.log(msg)
+							alert("error:"+msg['error'])
+						}
+					}
+				});
+			}
+			function register(){
+				window.location.href="/register/"
+			}
+		</script>
+	</head>
+	<body>
+		<div id="ops-login-header">
+			<div class="ops-logo ops-main-content">
+				<ul class="ops-login-header-linker">
+					<li><a href="#">About us</a></li>
+					<li><a href="#">Help</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="login-bd" class="ops-login-bd">
+			<div class="ops-main-content">
+				<div class="ops-input-box">
+					<div class="ops-input-title">
+						<h2>User login</h2>
+					</div>
+					<div class="ops-input-area">
+						<form onsubmit = "return false">
+							<div class="ops-input-item">
+								<p>username:</p>
+								<input type="text" id="username" placeholder="Please input the username" maxlength="20"/>
+								<span id="helpBlock1" class="help-block">Username can't be null</span>
+							</div>
+
+							<div class="ops-input-item">
+								<p>password:</p>
+								<input type="password" id="password" placeholder="Please input the password" />
+								<span id="helpBlock2" class="help-block">The password can't be null</span>
+							</div>
+							<span id="helpBlock3" class="help-block">Username or password is wrong</span>
+							<div class="ops-input-item">
+								<input style="line-height：50px ; width: 20px;height: 20px;" type="checkbox" id="remember-psw" 
+								 lay-skin="primary">
+								<span style="line-height：10px ;">record password</span>
+							</div>
+							<div class="ops-login-btn" onclick="sign();">login</div>
+							</br>
+							<!-- 此处修改注册 -->
+							<div class="ops-login-btn" onclick="register();">register</div>
+						</form>
+						<p class="ops-input-other"><a href="#">associate us</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="login-footer" class="ops-login-footer">
+			<div class="ops-footer-copyright">
+				<p class="ops-clearfix ops-links">
+					<a href="javascript:;" target="_blank">关于我们</a>
+					<a href="javascript:;" target="_blank">法律声明</a>
+					<a href="javascript:;" target="_blank">服务条款</a>
+					<a href="javascript:;" target="_blank">联系方式</a>
+					<p style="font-family:arial;">地址：吉林大学&nbsp;&nbsp;12345667许可证B1-20160901&nbsp;&nbsp;COPYRIGHT&nbsp;&nbsp;©&nbsp;
+						2020-2021<a href="http://jlu.edu.cn">jlumaker</a>&nbsp;版权所有&nbsp;ICP证：苏A2-20160101</p>
+					<p style="font-family:arial;">被迫营业许可证B1-20150962&nbsp;&nbsp;吉大学子&nbsp;&nbsp;版权所有</p>
+				</p>
+			</div>
+		</div>
+	</body>
+</html>
